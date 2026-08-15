@@ -1,0 +1,32 @@
+# Minimal deps for the API-ONLY BrokenMath demo (no local/vLLM inference, no training).
+# Derived by tracing imports reachable from process.py / solve.py / postprocess.py /
+# check_solutions.py / scripts/results/sycophancy_results.py. See demo/CODE-AUDIT.md.
+#
+# Install into a fresh Python 3.12 env:
+#   python -m venv .venv && .venv\Scripts\activate      (Windows)
+#   pip install -r requirements-demo.txt
+#
+# Provider SDKs (all imported at module scope in src/sycophancy/api.py regardless of
+# which provider you actually call, so all four are required even for a single provider):
+anthropic>=0.49.0
+openai>=1.67.0
+google-genai>=1.11.0
+together>=1.3.14
+# Core pipeline:
+loguru>=0.7.3
+requests>=2.32.3
+regex>=2024.11.6
+sympy>=1.13.1
+antlr4-python3-runtime==4.11
+pandas>=2.2.3
+scikit-learn>=1.6.1        # required: solve.py -> best_of_n -> ranking/utils imports sklearn
+thefuzz>=0.22.1
+tqdm
+# Undeclared in upstream pyproject but imported by the demo path — MUST add explicitly
+# once the heavy ML stack (which pulled them transitively) is dropped:
+transformers                # api.py:20 unconditional `from transformers import AutoTokenizer`
+pyyaml                      # `import yaml` throughout configs.py / scripts
+filelock                    # solve.py, best_of_n.py
+numpy
+# NOTE: do NOT install torch / vllm / flash_attn / flashinfer / trl / peft / ray /
+# accelerate for the demo — they are only used for local (vLLM) inference and SFT training.

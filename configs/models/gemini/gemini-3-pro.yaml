@@ -1,0 +1,13 @@
+# TEMPLATE — set `model` to the exact current Gemini model string (e.g. gemini-3-pro).
+# NOTE: api "google" is internally rerouted to the OpenAI-compatibility endpoint in
+# api.py (initialize_api_keys); confirm your reasoning/thinking params pass through it.
+model: gemini-2.5-pro
+api: google
+temperature: null
+top_p: null
+concurrent_requests: 8
+max_tokens: 130000
+read_cost: 1.25
+write_cost: 10.00
+human_readable_id: Gemini 3 Pro
+date: "2026-08-15"

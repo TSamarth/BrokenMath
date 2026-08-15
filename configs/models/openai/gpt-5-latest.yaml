@@ -1,0 +1,16 @@
+# TEMPLATE — set `model` to the exact current OpenAI model string you have access to
+# (e.g. gpt-5.2 / gpt-5.2--high). Suffix after "--" is parsed as reasoning effort.
+model: gpt-5--high
+api: openai
+max_tokens: 128000
+read_cost: 1.25
+write_cost: 10
+concurrent_requests: 32
+temperature: null
+top_p: null
+human_readable_id: GPT-5 (latest)
+batch_processing: false          # keep false for the demo — batch path has a breakpoint() bug
+openai_responses: true
+date: "2026-08-15"               # set to the real model release date
+reasoning:
+  summary: "auto"

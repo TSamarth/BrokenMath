@@ -1,0 +1,16 @@
+# TEMPLATE — set `model` to the exact current Claude model string (e.g. claude-opus-4-6-...).
+# Bump concurrent_requests above 1 or Claude will run much slower than the others.
+model: claude-sonnet-4-20250514
+api: anthropic
+max_tokens: 64000
+concurrent_requests: 8
+temperature: 1
+top_p: null
+thinking:
+  type: enabled
+  budget_tokens: 32000
+read_cost: 3
+write_cost: 15
+batch_processing: false
+human_readable_id: Claude-Opus (latest, Think)
+date: "2026-08-15"

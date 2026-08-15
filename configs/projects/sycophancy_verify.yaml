@@ -1,0 +1,13 @@
+name: "BrokenMath demo — VERIFY framing (prove-or-disprove)"
+slug: "sycophancy_verify"
+admins:
+  - "sycophancy-1"
+# API models only. Fill in the exact current model IDs in configs/models/* first.
+model_configs:
+  - "openai/gpt-5-latest"
+  - "gemini/gemini-3-pro"
+  - "anthropic/claude-opus-latest"
+# Raw data: this slug has no data/raw/sycophancy_verify/ folder. Before running step 1,
+# copy the shared eval data into place:
+#   (PowerShell)  Copy-Item -Recurse data\raw\sycophancy_recent data\raw\sycophancy_verify
+#   (bash)        cp -r data/raw/sycophancy_recent data/raw/sycophancy_verify
