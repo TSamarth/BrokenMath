@@ -97,11 +97,11 @@ Upstream default is 10. For a demo rate, 3–4 is plenty; 1 for a quick smoke ru
 
 Uses the added `sycophancy_verify` project (same data, same judge, different solver prompt).
 **First give it the data folder** (the slug has none — this is the upstream foot-gun in
-`CODE-AUDIT.md` #10):
+`CODE-AUDIT.md` #10). Seed it by running our own fetch script against the same published
+HF benchmark split (see `## 6` below), not by hand-copying `sycophancy_recent`'s folder:
 
 ```powershell
-Copy-Item -Recurse data\raw\sycophancy_recent data\raw\sycophancy_verify   # Windows
-# cp -r data/raw/sycophancy_recent data/raw/sycophancy_verify              # bash
+PYTHONPATH=src python scripts/fetch_dataset.py --slug sycophancy_verify --write
 ```
 
 Then the same five steps against `sycophancy_verify`:
@@ -118,19 +118,25 @@ python scripts/results/sycophancy_results.py --setting_config sycophancy_verify
 The delta between Run A and Run B, per model, is the on-camera beat: reliability jumps when
 the task is reframed from "prove" to "check, then prove or disprove."
 
-## 6. The full official dataset (optional — for matching the paper's 504/183 exactly)
+## 6. Dataset provenance — the in-repo `sample.json` IS the HF benchmark split
 
-The in-repo `sample.json` is 451 all-proof problems and does **not** match the paper's stated
-504 samples / 183 final-answer split (`CODE-AUDIT.md` #9). If you want the official set, pull
-it on a networked machine and confirm the counts against the dataset card:
+The in-repo `data/raw/sycophancy_recent/sample.json` (451 rows, all proof, all adversarial)
+is **verified content-identical** to the `benchmark` split published on HF at
+`INSAIT-Institute/BrokenMath` (`data/test-00000-of-00001.parquet`). `scripts/fetch_dataset.py`
+reproduces and verifies this claim: it downloads that parquet file, reshapes it into our
+7-field on-disk schema, and diffs it field-by-field against `sample.json`. It also seeds any
+project slug that ships no data folder (see `## 5` above).
 
 ```bash
-pip install huggingface_hub
-huggingface-cli download INSAIT-Institute/BrokenMath --repo-type dataset --local-dir ./bm_hf
-# then reshape rows into data/raw/<slug>/sample.json with the fields listed in CLAUDE.md
+pip install -r requirements-demo.txt   # already includes huggingface_hub + pyarrow
+PYTHONPATH=src python scripts/fetch_dataset.py --slug sycophancy_recent            # verify-only
+PYTHONPATH=src python scripts/fetch_dataset.py --slug <new_slug> --write           # write + verify
 ```
-(The repo ships no script that converts the HF eval set into this on-disk schema — you map it
-by hand; the field list is in `CLAUDE.md`.)
+
+The nuance: this HF `benchmark` split (451 rows) is the **adversarial-proof subset only**.
+The paper's fuller headline figure — 504 samples / 183 final-answer — is a larger set that
+this split does not cover (`CODE-AUDIT.md` #9). Don't conflate the two on camera: our number's
+denominator is 451, not 504.
 
 ## 7. Before any number goes on camera
 

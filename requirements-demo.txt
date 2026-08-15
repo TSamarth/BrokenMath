@@ -30,3 +30,7 @@ filelock                    # solve.py, best_of_n.py
 numpy
 # NOTE: do NOT install torch / vllm / flash_attn / flashinfer / trl / peft / ray /
 # accelerate for the demo — they are only used for local (vLLM) inference and SFT training.
+
+# Dataset provenance (scripts/fetch_dataset.py): pull + verify published HF benchmark split
+huggingface_hub
+pyarrow

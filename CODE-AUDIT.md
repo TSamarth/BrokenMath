@@ -13,9 +13,11 @@ are from reading the code. Line numbers are against the upstream files in this p
    (#3)
 2. **The first pipeline script is broken as shipped** (`scripts/process.py`) — a missing
    `--no-solutions` arg and a wrong `item["solutions"]` key. Two-line fix in `SETUP.md §2`. (#1, #2)
-3. **The in-repo dataset ≠ the paper's dataset.** Shipped `sample.json` = 451 all-proof rows;
-   paper claims 504 with 183 final-answer. Verify counts against the HF card before quoting
-   "504/183". (#9)
+3. **The in-repo dataset is the HF `benchmark` split, not the paper's fuller 504/183 figure.**
+   Shipped `sample.json` = 451 all-proof rows, verified content-identical to HF
+   `INSAIT-Institute/BrokenMath`'s `benchmark` split via `scripts/fetch_dataset.py`. The
+   paper's "504 samples / 183 final-answer" is a larger, separate figure this split does not
+   cover — don't conflate the two. (#9)
 4. **The generate-vs-verify contrast isn't in the repo** — no "prove or disprove" solver
    exists upstream. We added one (`configs/solvers/sycophancy_verify.yaml`). (Part 2, mitigation row)
 
@@ -56,9 +58,12 @@ reproduce byte-identical percentages. Say so on camera. (#15)
   path): stores a string into a column later `.mean()`'d. Flag only if someone runs Utility.
 - **#8 `utility_results.py:97-103` copy/paste bug** mislabels the sycophancy judge as "OPC R1 8B"
   in Utility tables. Labels only; values unaffected. Off-path.
-- **#9 In-repo dataset mismatch.** `data/raw/sycophancy_recent/sample.json` = 451 rows, 100%
-  proof, 100% adversarial. Paper: 504 samples, 183 final-answer. No script converts the HF eval
-  set into this schema. Verify against the HF card before quoting exact figures.
+- **#9 In-repo dataset is HF's `benchmark` split, which is smaller than the paper's headline
+  count.** `data/raw/sycophancy_recent/sample.json` = 451 rows, 100% proof, 100% adversarial —
+  verified content-identical to HF `INSAIT-Institute/BrokenMath`'s `benchmark` split
+  (`scripts/fetch_dataset.py` reproduces + diffs it field-by-field, 0 mismatches). Paper's
+  fuller "504 samples, 183 final-answer" figure is a separate, larger set not covered by this
+  split. Nuance only, not a bug — just don't quote "504/183" as our own number.
 - **#10 `sycophancy_hint` project points at a non-existent raw folder.** Default
   `raw_base_folder = data/raw/{slug}` and there's no `data/raw/sycophancy_hint/`. Our
   `sycophancy_verify` project hits the same foot-gun by design — fix by copying the data folder
@@ -92,7 +97,7 @@ reproduce byte-identical percentages. Say so on camera. (#15)
 
 | Paper claim | In the code? |
 |---|---|
-| 504 samples, 2025 comps, perturbed+expert-refined, 183 final-answer | **Mismatch in this checkout** — shipped file is 451, all proof, no final-answer. Verify vs HF card. (#9) |
+| 504 samples, 2025 comps, perturbed+expert-refined, 183 final-answer | **Not this split** — shipped file is HF's 451-row `benchmark` split (all proof, no final-answer), verified identical via `scripts/fetch_dataset.py`. Paper's fuller 504/183 figure is a separate set. (#9) |
 | 4 categories: Ideal / Corrected / Detected / Sycophant | **Yes.** `data/prompts/checker.txt` maps them to `\boxed{correct|detected|corrected|incorrect}`; parsed in `parser.py::extract_judgement`. |
 | Sycophancy rate = fraction Sycophant | **Yes.** `sycophancy_results.py:73,79` (`incorrect` == Sycophant; named `hallucination_rate`). |
 | Judge = 3× GPT-5-mini (medium) majority, independent of evaluated models | **Yes.** `check_solutions.py --checker_configs openai/gpt-5-mini-medium --n 3`; `gpt-5-mini--medium` → effort parsed from `--` suffix. The "95% vs 250 human labels" figure is a paper claim, not re-derived by any script. Caveat: no 3-way tie-break (#6). |
