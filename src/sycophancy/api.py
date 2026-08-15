@@ -65,6 +65,8 @@ class APIQuery:
                  openai_responses=False,
                  max_tool_calls=0,
                  tools=None,
+                 base_url=None,
+                 api_key=None,
                  **kwargs):
         """Initializes the APIQuery object.
 
@@ -149,6 +151,8 @@ class APIQuery:
         if (self.max_tool_calls == 0 or len(self.tool_descriptions) == 0) and "tool_choice" in self.kwargs:
             del self.kwargs["tool_choice"]
         self.api = api
+        self._config_api_key = api_key
+        self._config_base_url = base_url
         self.api_key = None
         self.base_url = None
 
@@ -243,9 +247,9 @@ class APIQuery:
             self.base_url = "https://api.fireworks.ai/inference/v1"
             self.api = "openai"
         elif self.api == "vllm_server":
-            self.api_key = "token-abc123"
+            self.api_key = self._config_api_key or "token-abc123"
             self.api = "openai"
-            self.base_url = f"http://localhost:8000/v1"
+            self.base_url = self._config_base_url or "http://localhost:8000/v1"
         elif self.api == "vllm" or self.api == 'vllm_sync':
             return
         else:
