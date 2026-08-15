@@ -8,6 +8,8 @@ def test_remote_base_url_and_api_key():
     assert q.base_url == "http://remote:1234/v1"
     assert q.api_key == "my-key"
     assert q.api == "openai"
+    assert "base_url" not in q.kwargs
+    assert "api_key" not in q.kwargs
 
 
 def test_default_localhost_fallback():
