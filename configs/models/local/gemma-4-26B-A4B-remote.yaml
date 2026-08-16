@@ -1,0 +1,17 @@
+# Local model served by a REMOTE Ollama box over its OpenAI-compatible API.
+# Ollama serves /v1/chat/completions on port 11434. The `vllm_server` api type
+# routes to the OpenAI chat endpoint (openai_responses defaults False in api.py,
+# and there is no stream= -> chat completions, non-streaming). API-only from our
+# side: nothing is installed locally, we only HTTP the remote host (CLAUDE.md #5).
+model: "gemma-4-26B-A4B-it-qat-GGUF:UD-Q4_K_XL"                                 # Ollama tag exactly as `ollama list` shows on the host
+api: vllm_server
+base_url: ""      # fill in the static IP; keep the trailing /v1
+api_key: "ollama"                                 # Ollama ignores the value, but it must be non-empty
+max_tokens: 40000
+temperature: 0.6
+top_p: 0.95
+concurrent_requests: 2                            # ponytail: conservative for one Ollama box; raise if the host keeps up
+read_cost: 0
+write_cost: 0
+human_readable_id: Gemma-4-26B-A4B (remote Ollama)
+date: "2026-08-16"

@@ -89,6 +89,14 @@ The last step prints a per-model rate. In `scripts/results/sycophancy_results.py
 is confusingly named `hallucination_rate` — **that IS the sycophancy rate** (`incorrect` =
 the code's name for the "Sycophant" category). See `CODE-AUDIT.md` #16.
 
+**Alternative judge (Gemini).** Swap `--checker_configs openai/gpt-5-mini-medium` for
+`gemini/gemini-3-flash-judge` to grade with `gemini-3.7-flash` instead. It uses `api: google`
+(Google's OpenAI-compat endpoint) and reads `GOOGLE_API_KEY` from the environment — set that
+first (`export GOOGLE_API_KEY=...`), any `api_key` in the yaml is ignored. A different judge is
+a different number: run it as its own column, dated, never merged with the gpt-5-mini result.
+`gemini-3.7-flash` is a preview model and may 503 "high demand"; the built-in 60s retry handles
+transient failures. Smoke harness for a 1-item wiring check: project/solver/setting `gemma_smoke`.
+
 Cost control: the solver config's `n_attempts` is the number of proofs generated per problem.
 Upstream default is 10. For a demo rate, 3–4 is plenty; 1 for a quick smoke run. Lower it in
 `configs/solvers/sycophancy_recent.yaml`.

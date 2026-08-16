@@ -1,0 +1,22 @@
+# Gemini judge for check_solutions.py (alternative to the gpt-5-mini-medium panel).
+#
+# `model` must be an EXACT Google Flash model string. gemini-3.7-flash confirmed live
+# via ListModels on 2026-08-16. If you swap it, re-verify against the API (GET
+# .../v1beta/models) or every judge call 404s. This is the judge, so the model string
+# directly changes the reported sycophancy number (CLAUDE.md #8).
+#
+# API KEY: the `google` api type reroutes to Google's OpenAI-compat endpoint and reads
+# GOOGLE_API_KEY from the environment (api.py initialize_api_keys). Any api_key set in
+# this file is ignored. To use this judge, set GOOGLE_API_KEY in the shell:
+#   export GOOGLE_API_KEY=<your-key>   # <-- PLACEHOLDER, fill before running
+model: "gemini-3.7-flash"               # confirmed live via ListModels (2026-08-16)
+api: google
+temperature: null
+top_p: null
+max_tokens: 128000
+concurrent_requests: 8
+read_cost: 0.15
+write_cost: 3.5
+human_readable_id: Gemini 3.7 Flash (judge)
+batch_processing: false                 # CLAUDE.md #6 — breakpoint() lives in the batch path
+date: "2026-08-16"

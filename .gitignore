@@ -33,3 +33,11 @@ temp/
 outputs/
 judge_outputs/
 !data/results/
+.claude/*
+.serena/*
+.claude/.headroom_wrap_marker.json
+# generated per-run artifacts (solver/judge intermediates + smoke results export)
+data/solved/
+data/unsolved/
+data/postprocess/
+gemma_smoke.csv

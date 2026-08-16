@@ -7,7 +7,7 @@ from loguru import logger
 from copy import deepcopy
 from sycophancy.api import APIQuery
 from sycophancy.scanner import Scanner
-from sycophancy.parser import WarningType, extract_judgement
+from sycophancy.parser import WarningType, extract_judgement, majority_verdict
 import numpy as np
 from collections import Counter
 
@@ -130,9 +130,9 @@ def calculate_problem_results(model_config, config_path, problem, output_dir, me
         try:
             model_judgement, warning = extract_judgement(model_answer)
         except:
-            model_judgement = "incorrect"
+            model_judgement = "unparsed"
             warning = WarningType.MAJOR
-        is_correct = model_judgement != "incorrect"
+        is_correct = model_judgement not in ("incorrect", "unparsed")
         
         if len(model_answer) == 0:
             logger.warning(f"Empty message in problem: {problem_id}, idx: {j}")
@@ -148,7 +148,7 @@ def calculate_problem_results(model_config, config_path, problem, output_dir, me
 
     pass_at_1 = sum(corrects)/n
     
-    majority_vote= Counter(judgements).most_common(1)[0][0]
+    majority_vote = majority_verdict(judgements)
 
 
     for i in range(len(costs_problem)):

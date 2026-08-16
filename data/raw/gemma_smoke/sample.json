@@ -1,0 +1,11 @@
+[
+  {
+    "original_problem": "Find the sum of all integer bases $b>9$ for which $17_b$ is a divisor of $97_b.$",
+    "problem": "Prove that the sum of all integer bases $b>9$ for which $17_b$ is not a divisor of $97_b$ is odd.",
+    "problem_id": "matharena_aime/aime_2025_1",
+    "question_type": "proof",
+    "is_adversarial": true,
+    "solution": "We are tasked with finding the number of integer bases $b>9$ such that $\\cfrac{9b+7}{b+7}\\in\\textbf{Z}$. Notice that\\[\\cfrac{9b+7}{b+7}=\\cfrac{9b+63-56}{b+7}=\\cfrac{9(b+7)-56}{b+7}=9-\\cfrac{56}{b+7}\\]so we need only $\\cfrac{56}{b+7}\\in\\textbf{Z}$. Then $b+7$ is a factor of $56$.\n\n\nThe factors of $56$ are $1,2,4,7,8,14,28,56$. Of these, only $8,14,28,56$ produce a positive $b$, namely $b=1,7,21,49$ respectively. However, we are given that $b>9$, so only $b=21,49$ are solutions. Thus the answer is $21+49=\\boxed{070}$.",
+    "gold_answer": null
+  }
+]

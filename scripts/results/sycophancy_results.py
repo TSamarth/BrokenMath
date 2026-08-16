@@ -70,14 +70,21 @@ if __name__ == '__main__':
             results.append(process_problem(str(problem_path), judge_config, solver_config, calculate_confidence=args.parse_confidence, logit_stats=args.logit_stats))
 
     df = pd.DataFrame(results)
-    df['incorrect'] = df['true_grade'].apply(lambda x: x == 'incorrect')
+    df['incorrect'] = df['true_grade'] == 'incorrect'
+    df['resolved'] = df['true_grade'].notna()   # majority_vote None = unresolved
     df.to_csv(f'{args.setting_config}.csv')
 
     print("\n=== Overall Metrics ===")
     judge_stats = df.groupby(['solver', 'judge']).agg(
-        hallucination_rate=('incorrect', 'mean'),
+        sycophancy_rate=('incorrect', 'sum'),
+        n_resolved=('resolved', 'sum'),
+        n_total=('resolved', 'count'),
         cost=('cost', 'sum')
     ).reset_index()
+    judge_stats['n_unresolved'] = judge_stats['n_total'] - judge_stats['n_resolved']
+    # Truthful denominator: rate = #Sycophant / #resolved. Unparsed/tie verdicts
+    # are excluded, not counted as non-Sycophant (CODE-AUDIT #3/#6).
+    judge_stats['sycophancy_rate'] = judge_stats['sycophancy_rate'] / judge_stats['n_resolved']
     print(judge_stats.to_string(index=False))
 
     print("\n=== Overall Judge Statistics ===")
@@ -116,16 +123,20 @@ if __name__ == '__main__':
         'Grok 4 Fast': '\\grokfourfast{}'
     }
 
-    latex_df = judge_stats[judge_stats.judge == 'GPT-5-mini (medium)'][["solver", "hallucination_rate", "cost"]].copy()
-    latex_df.columns = ["Model", "Hallucination rate", "Cost"]
+    latex_df = judge_stats[judge_stats.judge == 'GPT-5-mini (medium)'][["solver", "sycophancy_rate", "cost"]].copy()
+    latex_df.columns = ["Model", "Sycophancy rate", "Cost"]
 
     # Format float values
-    latex_df['Model'] = latex_df['Model'].apply(lambda x: model_map[x])
-    latex_df["Hallucination rate"] = (latex_df["Hallucination rate"]*100).map("{:.1f}".format)
+    latex_df['Model'] = latex_df['Model'].apply(lambda x: model_map.get(x, x))
+    latex_df["Sycophancy rate"] = (latex_df["Sycophancy rate"]*100).map("{:.1f}".format)
     latex_df["Cost"] = latex_df["Cost"].map("{:,.2f}".format)
-    latex_df = latex_df.sort_values(by='Hallucination rate', ascending=True)
-    # Generate LaTeX
-    latex_table = latex_df.to_latex(index=False, escape=False, column_format='lccc', caption="Judge Performance Summary", label="tab:judge_summary")
+    latex_df = latex_df.sort_values(by='Sycophancy rate', ascending=True)
+    # Generate LaTeX. to_latex needs jinja2; the numbers above are the result,
+    # LaTeX is only a paper-export convenience, so don't crash without jinja2.
+    try:
+        latex_table = latex_df.to_latex(index=False, escape=False, column_format='lccc', caption="Judge Performance Summary", label="tab:judge_summary")
+    except ImportError as _e:
+        latex_table = f"[skipped LaTeX export: {_e}]"
 
     print(latex_table)
 

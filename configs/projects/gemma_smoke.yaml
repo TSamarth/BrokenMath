@@ -1,0 +1,6 @@
+name: "Gemma Ollama smoke"
+slug: "gemma_smoke"
+admins:
+  - "sycophancy-1"
+model_configs:
+  - "local/gemma-4-26B-A4B-remote"

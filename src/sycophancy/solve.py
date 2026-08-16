@@ -151,7 +151,7 @@ def save_file(data, solver_config, project_config, config_name, timeout, i, full
     os.makedirs(os.path.dirname(file_lock_path), exist_ok=True)
 
             # --------- begin critical section ---------
-    lock = FileLock(file_lock_path + ".lock", unlink_on_release=True)      # one lock per JSON file
+    lock = FileLock(file_lock_path + ".lock")      # one lock per JSON file (unlink_on_release unsupported by WindowsFileLock; matches best_of_n.py)
     try:
         with lock.acquire(timeout=timeout):
                     # 1) read the current contents (if any)
