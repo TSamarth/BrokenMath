@@ -13,8 +13,8 @@ model: "gemini-3.7-flash"               # confirmed live via ListModels (2026-08
 api: google
 temperature: null
 top_p: null
-max_tokens: 128000
-concurrent_requests: 8
+max_tokens: 8192
+concurrent_requests: 2
 read_cost: 0.15
 write_cost: 3.5
 human_readable_id: Gemini 3.7 Flash (judge)

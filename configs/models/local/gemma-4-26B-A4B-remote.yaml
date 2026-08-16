@@ -7,7 +7,7 @@ model: "gemma-4-26B-A4B-it-qat-GGUF:UD-Q4_K_XL"                                 
 api: vllm_server
 base_url: ""      # fill in the static IP; keep the trailing /v1
 api_key: "ollama"                                 # Ollama ignores the value, but it must be non-empty
-max_tokens: 40000
+max_tokens: 65536
 temperature: 0.6
 top_p: 0.95
 concurrent_requests: 2                            # ponytail: conservative for one Ollama box; raise if the host keeps up
