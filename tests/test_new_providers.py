@@ -33,7 +33,27 @@ def test_opencode_resolves_and_keeps_params():
     assert "base_url" not in q.kwargs and "api_key" not in q.kwargs
 
 
+def test_openrouter_default_path_keeps_params():
+    # Default openrouter routing: no via_openai, so api stays "openrouter"
+    # and uses the custom openrouter_query() path. Inference params must
+    # reach the request body; secrets must not.
+    os.environ["OPENROUTER_API_KEY"] = "or-test"
+    q = APIQuery(model="google/gemma-4-26b-a4b-it:free", api="openrouter",
+                 max_tokens=16, temperature=0.6, top_p=0.95, max_retries=0)
+    assert q.api == "openrouter"          # NOT collapsed to openai
+    assert q.base_url == "https://openrouter.ai/api/v1"
+    assert q.api_key == "or-test"
+    # openrouter_query() posts json={'model':..., 'messages':..., **q.kwargs}
+    assert q.kwargs["temperature"] == 0.6
+    assert q.kwargs["top_p"] == 0.95
+    assert q.kwargs["max_tokens"] == 16   # injected via max_tokens_param
+    # cost bookkeeping and secrets must not leak into the request payload
+    assert "read_cost" not in q.kwargs and "write_cost" not in q.kwargs
+    assert "base_url" not in q.kwargs and "api_key" not in q.kwargs
+
+
 if __name__ == "__main__":
     test_groq_resolves_and_keeps_params()
     test_opencode_resolves_and_keeps_params()
+    test_openrouter_default_path_keeps_params()
     print("OK")
