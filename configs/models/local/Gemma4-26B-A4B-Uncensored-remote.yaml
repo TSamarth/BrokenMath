@@ -3,7 +3,7 @@
 # routes to the OpenAI chat endpoint (openai_responses defaults False in api.py,
 # and there is no stream= -> chat completions, non-streaming). API-only from our
 # side: nothing is installed locally, we only HTTP the remote host (CLAUDE.md #5).
-model: "gemma-4-26B-A4B-it-qat-GGUF:ctx16k"       # derived tag, num_ctx baked in via /api/create (see below) -- base tag defaults to 8192
+model: "Gemma4-26B-A4B-QAT-Uncensored-HauhauCS-Balanced-Q4_K_M:ctx16k"       # derived tag, num_ctx baked in via /api/create (see below) -- base tag defaults to 8192
 api: vllm_server
 base_url: ""      # fill in the static IP; keep the trailing /v1
 api_key: "ollama"                           # Ollama ignores the value, but it must be non-empty
@@ -16,5 +16,5 @@ top_p: 0.95
 concurrent_requests: 2                            # ponytail: conservative for one Ollama box; raise if the host keeps up
 read_cost: 0
 write_cost: 0
-human_readable_id: Gemma-4-26B-A4B (remote Ollama)
+human_readable_id: Gemma4-26B-A4B-QAT-Uncensored (remote Ollama)
 date: "2026-08-16"
