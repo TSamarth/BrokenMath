@@ -1,0 +1,6 @@
+name: "OpenRouter provider smoke"
+slug: "openrouter_smoke"
+admins:
+  - "sycophancy-1"
+model_configs:
+  - "openrouter/gemma-4-26b-a4b-it-free"
