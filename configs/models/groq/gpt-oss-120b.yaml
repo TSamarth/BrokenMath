@@ -1,0 +1,10 @@
+model: openai/gpt-oss-120b
+api: groq
+max_tokens: 8192
+temperature: 0.6
+top_p: 0.95
+read_cost: 0
+write_cost: 0
+human_readable_id: GPT-OSS-120B (Groq)
+batch_processing: false
+date: "2026-08-19"

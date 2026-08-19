@@ -20,7 +20,7 @@ prompt_gold: |
   - Put your final answer within \\boxed{{}}.
 
   {problem}
-n_attempts: 10
+n_attempts: 3          # lowered from upstream 10; matches sycophancy_verify.yaml for paired comparison
 problem_regexes:
   - .*
 allow_shuffle: true

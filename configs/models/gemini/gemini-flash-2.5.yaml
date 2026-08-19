@@ -4,8 +4,8 @@ max_tokens: null
 temperature: null
 top_p: null
 concurrent_requests: 8
-config:
-  max_output_tokens: 64000
+#config:
+max_tokens: 64000
 read_cost: 0.15
 write_cost: 3.5
 human_readable_id: gemini-2.5-flash (think)

@@ -1,0 +1,12 @@
+# CONFIRM id: run  curl -s https://api.groq.com/openai/v1/models -H "Authorization: Bearer $GROQ_API_KEY" | jq -r '.data[].id'
+# (user asked for "qwen3.6 27b"; no such Groq id exists — qwen/qwen3-32b is the closest live model)
+model: qwen/qwen3.6-27b
+api: groq
+max_tokens: 9000
+temperature: 0.6
+top_p: 0.95
+read_cost: 0
+write_cost: 0
+human_readable_id: Qwen3.6-27B (Groq)
+batch_processing: false
+date: "2026-08-19"

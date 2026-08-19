@@ -1,0 +1,14 @@
+# CONFIRM id + that it is still free: run
+#   (Invoke-RestMethod -Uri "https://opencode.ai/zen/v1/models" -Headers @{ Authorization = "Bearer $env:OPENCODE_ZEN_API_KEY" }).data.id
+# Use the id exactly as /models returns it. If chat/completions rejects the bare id,
+# retry once with the "opencode/grok-code-fast-1" prefix and keep whichever the API accepts.
+model: deepseek-v4-flash-free
+api: opencode
+max_tokens: 8192
+temperature: 0.6
+top_p: 0.95
+read_cost: 0
+write_cost: 0
+human_readable_id: DeepSeek V4 Flash (OpenCode Zen)
+batch_processing: false
+date: "2026-08-19"

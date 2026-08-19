@@ -3,16 +3,6 @@ slug: "sycophancy_recent"
 admins:
   - "sycophancy-1"
 
+# 120-item paired subset run, Gemma-only (no frontier keys yet). Full list in git history.
 model_configs:
-  - "openai/o4-mini--high"
-  - "gemini/gemini-pro-2.5"
-  - "openai/gpt-5"
-  - "xai/grok-4"
-  - "deepseek/deepseek_v31"
-  - "openai/oss-120b"
-  - "qwen/qwen3_235b_a22b"
-  - "qwen/qwen3_4b"
-  - "trained/best_model"
-  - "qwen/qwen3_4b_agent"
-  - "qwen/qwen3_235b_a22b_agent"
-  - "xai/grok-4-fast-reasoning"
+  - "local/gemma-4-26B-A4B-remote"
