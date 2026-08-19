@@ -67,6 +67,7 @@ class APIQuery:
                  tools=None,
                  base_url=None,
                  api_key=None,
+                 num_ctx=None,
                  **kwargs):
         """Initializes the APIQuery object.
 
@@ -155,6 +156,10 @@ class APIQuery:
         self._config_base_url = base_url
         self.api_key = None
         self.base_url = None
+        # Ollama-specific: /v1/chat/completions ignores max_tokens as a context-length
+        # override and silently truncates at its own num_ctx default (usually 8192)
+        # regardless of max_tokens. Only meaningful for the vllm_server (Ollama) path.
+        self.num_ctx = num_ctx
 
         self.initialize_api_keys()
 
@@ -245,6 +250,14 @@ class APIQuery:
         elif self.api == "fireworks":
             self.api_key = os.getenv("FIREWORKS_API_KEY")
             self.base_url = "https://api.fireworks.ai/inference/v1"
+            self.api = "openai"
+        elif self.api == "groq":
+            self.api_key = os.getenv("GROQ_API_KEY")
+            self.base_url = "https://api.groq.com/openai/v1"
+            self.api = "openai"
+        elif self.api == "opencode":
+            self.api_key = os.getenv("OPENCODE_ZEN_API_KEY")
+            self.base_url = "https://opencode.ai/zen/v1"
             self.api = "openai"
         elif self.api == "vllm_server":
             self.api_key = self._config_api_key or "token-abc123"
@@ -1087,6 +1100,7 @@ class APIQuery:
                         messages=messages + output_messages,
                         tools=None if current_tool_calls >= max_tool_calls else self.tool_descriptions,
                         timeout=self.timeout,
+                        extra_body={"options": {"num_ctx": self.num_ctx}} if self.num_ctx is not None else None,
                         **self.kwargs
                     )
                 except Exception as e:
