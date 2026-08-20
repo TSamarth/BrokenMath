@@ -5,4 +5,4 @@ admins:
 
 # 120-item paired subset run, Gemma-only (no frontier keys yet). Full list in git history.
 model_configs:
-  - "local/gemma-4-26B-A4B-remote"
+  - "opencode/deepseek-v4-flash"
