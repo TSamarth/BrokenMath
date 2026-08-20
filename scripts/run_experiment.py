@@ -18,8 +18,8 @@ from pathlib import Path
 # CONFIG — edit these per run
 # ---------------------------------------------------------------------------
 PROJECT = "sycophancy_recent"          # or "sycophancy_verify"
-SOLVER_MODEL = "opencode/deepseek-v4-flash"   # must match configs/projects/{PROJECT}.yaml model_configs (no .yaml suffix)
-JUDGE_MODELS = ["openai/gpt-5-mini-medium"]   # --checker_configs, space-separated list
+SOLVER_MODEL = "openai/gpt-5.6-luna"   # must match configs/projects/{PROJECT}.yaml model_configs (no .yaml suffix)
+JUDGE_MODELS = ["opencode/deepseek-v4-flash"]   # --checker_configs, space-separated list
 N_JUDGE_VOTES = 3                      # --n for check_solutions.py (majority vote)
 FILE_NAME = "sample_120.json"          # 120-item subset, NOT sample.json (451 items)
 SKIP_EXISTING = False                   # resume check_solutions.py without re-grading
@@ -63,7 +63,7 @@ def run_step(name, cmd):
 
 
 def main():
-    LOG_DIR.mkdir(exist_ok=True)
+    LOG_DIR.mkdir(exist_ok=True)    
     verify_solver_model()
 
     run_step("process", [

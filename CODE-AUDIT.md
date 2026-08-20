@@ -45,9 +45,14 @@ reproduce byte-identical percentages. Say so on camera. (#15)
   (`max_retries=10`, 60 s sleeps) wraps an inner 5-retry loop; a persistently failing request
   hangs a long time, then downgrades to `""` (→ #3). Lower retries/sleeps in model configs for
   a live demo, or watch logs.
-- **#5 `src/sycophancy/api.py:1234` — a bare `breakpoint()` in `retrieve_batch()`.** Dormant
-  unless a model config sets `batch_processing: true` (e.g. `o3.yaml`, `o4-mini--high.yaml`).
-  Keep the demo models on `batch_processing: false`, or it hangs a non-interactive run forever.
+- **#5 FIXED — `src/sycophancy/api.py` had a bare `breakpoint()` in `retrieve_batch()`.**
+  Correction to the original finding: it was not reachable via plain `batch_processing: true`
+  (that path uses `openai_batch_processing()` / `anthropic_batch_processing()`, which never
+  called `retrieve_batch()`). It only fired via `scripts/retrieve_batches.py --batch_id`
+  (the async resume path, `solve.py:105`). Removed; `retrieve_batch()` also had a latent
+  `UnboundLocalError` if the first `client.batches.retrieve()` call raised — fixed alongside.
+  Regression test: `tests/test_retrieve_batch.py`. `batch_processing: true` is now safe for
+  `api: openai` / `api: anthropic` configs.
 
 ### Moderate
 - **#6 No tie-break for a 3-way judge split.** With 4 categories and `--n 3`, a 1-1-1 split has

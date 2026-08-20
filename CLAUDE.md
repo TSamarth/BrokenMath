@@ -35,8 +35,28 @@ video; SYCON-Bench is the other. This is the *verifiable-math* half — the thes
 5. **API-only. Do not install or run the local/training stack.** No torch/vLLM/flash-attn/
    trl/peft/ray/accelerate; no SFT training; no OPC-R1-8B utility judge (needs a GPU). If a
    task seems to need them, you've drifted off the demo.
-6. **Keep `batch_processing: false`** on all demo model configs (there's a `breakpoint()` in
-   the batch path — `CODE-AUDIT.md` #5).
+6. **`batch_processing: true` is safe for OpenAI/Anthropic/Groq/OpenRouter configs** (the
+   stray `breakpoint()` in `api.py`'s `retrieve_batch()` — `CODE-AUDIT.md` #5 — was removed;
+   only affected the `retrieve_batches.py --batch_id` resume path, not the normal run path).
+   Groq is OpenAI-compatible (`/v1/files` + `/v1/batches`) and routes through
+   `openai_batch_processing()`. OpenRouter has its own **beta** Batch API
+   (`POST/GET api/beta/batches`, confirmed live 2026-08-21 — my first spike missed the
+   `/beta/` namespace and wrongly said it didn't exist; corrected) — Anthropic-shaped
+   (inline `requests` array, results returned inline on poll, no file upload), wired via
+   `openrouter_batch_processing()`. **Only `:batch`-suffixed model slugs are batch-eligible**
+   on OpenRouter (e.g. `google/gemini-3.7-flash:batch`) — check `GET /v1/models` before
+   adding a new OpenRouter batch config; our two free-tier configs (`gemma-4-26b-a4b-it`,
+   `laguna-xs-2.1`) have no `:batch` variant and can't use this path. OpenRouter batch does
+   **not** support the `retrieve_batches.py --batch_id` resume path (same as Anthropic today
+   — `retrieve_queries()` only implements `api: openai`). Reasoning-mandatory OpenRouter
+   models (e.g. Gemini) can return `content: null` with the real answer under `reasoning` if
+   `max_tokens` runs out mid-reasoning (`finish_reason: "length"`) —
+   `_parse_openrouter_batch_results` falls back to `reasoning`/`reasoning_content` same as
+   the sync `openrouter_query()` path; confirmed live 2026-08-21 (2-query smoke test against
+   `google/gemini-3.7-flash:batch` hit this on the 2nd query). Leave `false` for OpenCode
+   Zen — spiked 2026-08-21, it exposes only `/v1/chat|messages|models|responses`, no
+   files/batches at all. Batch jobs have up to a 24h completion window — use for offline
+   full-dataset runs, not live on-camera smoke tests.
 7. **Cost discipline.** `n_attempts` in the solver = proofs generated per problem. Use 1 for
    smoke tests, 3–4 for a reportable rate. Don't run 10× the 451-problem set across 3 models
    without a cost estimate first. If unsure about spend, stop and ask.

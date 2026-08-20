@@ -13,7 +13,7 @@ parser.add_argument("--no-solutions", dest="no_solutions", action="store_true", 
 args = parser.parse_args()
 
 project_config = load_config(os.path.join(args.config_base, args.project + ".yaml"))
-data = json.load(open(os.path.join(project_config.raw_base_folder, args.file_name), "r"))
+data = json.load(open(os.path.join(project_config.raw_base_folder, args.file_name), "r", encoding="utf-8"))
 
 for i, item in enumerate(data):
     if not args.no_solutions and len(item.get("solutions", [])) > 0 and item["solutions"][0]["solution"] is None:

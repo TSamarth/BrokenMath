@@ -104,8 +104,8 @@ class APIQuery:
             else:
                 reasoning_effort = 'high'
             logger.info(f"Model: {model}, Reasoning effort: {reasoning_effort}")
-        if api not in ["anthropic", "openai"] and batch_processing:
-            logger.warning("Batch processing is only supported for the Anthropic API and OpenAI API.")
+        if api not in ["anthropic", "openai", "groq", "openrouter"] and batch_processing:
+            logger.warning("Batch processing is only supported for the Anthropic, OpenAI, Groq, and OpenRouter APIs.")
             batch_processing = False
         if openai_responses and not batch_processing:
             max_tokens_param = "max_output_tokens"
@@ -392,6 +392,8 @@ class APIQuery:
         if self.batch_processing:
             if self.api == "openai":
                 processed_results = self.openai_batch_processing(queries_actual)
+            elif self.api == "openrouter":
+                processed_results = self.openrouter_batch_processing(queries_actual)
             else:
                 processed_results = self.anthropic_batch_processing(queries_actual)
             for idx, result in enumerate(processed_results):
@@ -664,7 +666,109 @@ class APIQuery:
                 outputs[i] = output
         
         return outputs
-        
+
+    def openrouter_batch_processing(self, queries, error_repetition=0):
+        if error_repetition >= self.max_retries:
+            return [
+                {"output": "", "input_tokens": 0, "output_tokens": 0}
+                for _ in range(len(queries))
+            ]
+
+        text_queries = [query[0] for query in queries]
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+        }
+        batch_requests = [
+            {"custom_id": f"apiquery-{i}", "body": {"messages": text_query, **self.kwargs}}
+            for i, text_query in enumerate(text_queries)
+        ]
+        # Field order matters: OpenRouter stream-parses the body and 400s if
+        # `requests` is serialized before `endpoint`/`model`.
+        payload = {
+            "endpoint": "/v1/chat/completions",
+            "model": self.model,
+            "requests": batch_requests,
+        }
+        response = requests.post(
+            "https://openrouter.ai/api/beta/batches", headers=headers, json=payload
+        )
+        if response.status_code not in (200, 202):
+            raise Exception(f"Error creating OpenRouter batch: {response.status_code} - {response.text}")
+        batch = response.json()
+        batch_id = batch["id"]
+        logger.info(f"Running {len(queries)} queries with OpenRouter batch ID {batch_id}")
+
+        terminal_statuses = {"completed", "failed", "expired", "cancelled"}
+        current_request_counts = dict(batch["request_counts"])
+        while batch["status"] not in terminal_statuses:
+            time.sleep(10)
+            try:
+                poll_response = requests.get(
+                    f"https://openrouter.ai/api/beta/batches/{batch_id}", headers=headers
+                )
+                poll_response.raise_for_status()
+                batch = poll_response.json()
+            except Exception as e:
+                logger.warning(f"Error connecting to OpenRouter for batch {batch_id}. Retrying in 10s. Error: {e}")
+                continue
+            if dict(batch["request_counts"]) != current_request_counts:
+                current_request_counts = dict(batch["request_counts"])
+                logger.info(
+                    f"Completed Requests Progress: {current_request_counts['completed']}/{len(queries)}. "
+                    f"Errors: {current_request_counts['failed']}/{len(queries)}"
+                )
+
+        outputs, repeat_indices = self._parse_openrouter_batch_results(batch, len(queries))
+
+        if len(repeat_indices) > 0:
+            logger.info(f"Repeating {len(repeat_indices)} queries.")
+            repeat_queries = [queries[i] for i in repeat_indices]
+            repeat_outputs = self.openrouter_batch_processing(repeat_queries, error_repetition + 1)
+            for i, output in zip(repeat_indices, repeat_outputs):
+                outputs[i] = output
+
+        return outputs
+
+    def _parse_openrouter_batch_results(self, batch, num_queries):
+        """Pure: batch response dict -> (outputs, repeat_indices). No I/O, unit-testable."""
+        outputs = [None] * num_queries
+        repeat_indices = []
+        if batch["status"] != "completed" or batch.get("results") is None:
+            logger.error(f"OpenRouter batch {batch.get('id')} ended with status {batch.get('status')}: {batch.get('error')}")
+            return outputs, list(range(num_queries))
+
+        for result in batch["results"]:
+            index = int(result["custom_id"].split("-")[-1])
+            if result.get("response") is None or result["response"]["status_code"] != 200:
+                repeat_indices.append(index)
+                logger.error(f"Error in OpenRouter batch for query {index}: {result.get('error') or result['response']['status_code']}")
+                continue
+            try:
+                body = result["response"]["body"]
+                message = body["choices"][0]["message"]
+                output = message["content"]
+                # Reasoning-mandatory models (e.g. Gemini) can return content: null with
+                # the text under reasoning/reasoning_content if the token budget runs out
+                # mid-answer (finish_reason "length") -- same fallback as openrouter_query().
+                for rk in ["reasoning_content", "reasoning"]:
+                    if rk in message and message[rk] is not None:
+                        output = message[rk] + "</think>" + (output or "")
+                        break
+                outputs[index] = {
+                    "output": output,
+                    "input_tokens": body["usage"]["prompt_tokens"],
+                    "output_tokens": body["usage"]["completion_tokens"],
+                }
+            except Exception as e:
+                logger.error(f"Error processing OpenRouter result for query {index}: {e}")
+                repeat_indices.append(index)
+
+        for i in range(num_queries):
+            if outputs[i] is None and i not in repeat_indices:
+                repeat_indices.append(i)
+
+        return outputs, repeat_indices
 
     def anthropic_query(self, query):
         query, image_path = query
@@ -1210,7 +1314,8 @@ class APIQuery:
                 batch = client.batches.retrieve(batch_id)
             except Exception as e:
                 logger.warning(f"Error connecting to OpenAI. Retrying in 10s.")
-                pass
+                time.sleep(10)
+                continue
             request_counts = dict(batch.request_counts)
             logger.info(f"Completed Requests Progress: {request_counts['completed']}/{len(queries)}. Errors: {request_counts['failed']}/{len(queries)}")
             if batch.status == "completed":
@@ -1249,7 +1354,6 @@ class APIQuery:
                 except Exception as e:
                     logger.error(f"Error: {e}")
                     repeat_indices.append(index)
-        breakpoint()
         for i in range(len(outputs)):
             if outputs[i] is None:
                 repeat_indices.append(i)

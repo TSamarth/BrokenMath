@@ -6,6 +6,88 @@ rewrite others' notes.
 
 ---
 
+## 2026-08-21 — OpenRouter batch processing wired + live-validated
+
+Spiked OpenCode Zen and OpenRouter for batch support (user request: OpenRouter
+rates are often cheaper than going direct, wanted it for paid runs). OpenCode
+Zen is a dead end — docs list only `/v1/chat|messages|models|responses`, no
+files/batches. OpenRouter has a real **beta** Batch API
+(`POST/GET api/beta/batches`); my first spike missed the `/beta/` namespace
+and wrongly reported no batch endpoint — corrected after the user pointed at
+the actual URL.
+
+- **Shape.** Anthropic-style, not OpenAI-style: single POST with an inline
+  `requests` array (`endpoint`/`model` must serialize before `requests` or the
+  API 400s), poll `GET .../batches/:id` until a terminal status, `results`
+  come back inline on that same response — no file upload/download step.
+  Confirmed against `openrouter.ai/docs/batch-quickstart` and live requests.
+- **Constraint:** only `:batch`-suffixed model slugs are batch-eligible
+  (checked live via `GET /v1/models`, 61 such models, all paid frontier
+  mirrors). Neither existing OpenRouter config (`gemma-4-26b-a4b-it`,
+  `laguna-xs-2.1`, both `:free`) qualifies.
+- **Code.** `src/sycophancy/api.py`: gate at ~line 107 now allows
+  `"openrouter"`; dispatch in `run_queries()` (~line 392) branches to new
+  `openrouter_batch_processing()`; parsing split into a pure
+  `_parse_openrouter_batch_results()` (unit-testable without network/cost).
+  `retrieve_queries()`/`retrieve_batches.py --batch_id` resume path
+  deliberately NOT extended to OpenRouter — same scope limit as Anthropic
+  today, flagged not silently dropped.
+- **New config.** `configs/models/openrouter/gemini-3.7-flash-batch.yaml`
+  (`google/gemini-3.7-flash:batch`, per user request — picked as the smoke-test
+  model instead of the cheaper `gpt-5-nano:batch` I'd proposed).
+- **Live smoke test (real batch, real $ — OpenRouter balance $10, cost
+  negligible for 2 tiny queries):** ran `openrouter_batch_processing()` against
+  `google/gemini-3.7-flash:batch` for real. Completed in ~3 min
+  (`batch-1787259742-km02U5bTJvME5zhULisV`). Caught a real bug: this model has
+  *mandatory* reasoning, and with a tight `max_tokens` one query hit
+  `finish_reason: "length"` with `content: null` — the actual text was under
+  `message.reasoning`. Fixed `_parse_openrouter_batch_results` to fall back to
+  `reasoning`/`reasoning_content`, matching the existing sync
+  `openrouter_query()` behavior. Re-verified against the real captured
+  response shape (now a permanent test case).
+- **Tests.** `tests/test_new_providers.py` — 3 new cases (gate-allows-openrouter,
+  parse-happy-path-and-errors, parse-reasoning-fallback using the real captured
+  shape). All 6 tests in the file pass.
+- **Docs.** `CLAUDE.md` rule #6 reworded to cover OpenRouter batch, the
+  `:batch`-suffix constraint, the no-resume-path scope limit, and the
+  reasoning-fallback fix.
+
+## 2026-08-21 — Fixed the `breakpoint()` blocking `batch_processing` (CODE-AUDIT #5)
+
+Root-caused via systematic debugging, not guessed. `src/sycophancy/api.py:1252` had a
+bare `breakpoint()` in `retrieve_batch()`. Traced the actual call path: it is ONLY
+reachable when `solve.py:105` is given a non-`None` `batch_id`, i.e. only via
+`scripts/retrieve_batches.py --batch_id <id>` (the async resume-a-submitted-batch
+script). Plain `batch_processing: true` never hit it — that path goes through
+`openai_batch_processing()` / `anthropic_batch_processing()` (submit+poll+retrieve
+self-contained), which is and always was clean. So CLAUDE.md rule #6's original
+"keep batch_processing false on all demo configs" was broader than the actual bug.
+
+- **Fix.** Deleted the `breakpoint()`. Also fixed a latent `UnboundLocalError` in the
+  same function: if the first `client.batches.retrieve()` call raised, the loop fell
+  through to `batch.request_counts` on an unassigned `batch` — now `continue`s after
+  a `time.sleep(10)` instead.
+- **Test.** `tests/test_retrieve_batch.py` (stdlib `unittest.mock`, matches the
+  existing plain-function/`__main__` style in `tests/test_new_providers.py`) — mocks
+  the OpenAI client through a completed 2-row batch, asserts it returns without
+  hanging. Passes (`PYTHONPATH=src .venv/Scripts/python.exe tests/test_retrieve_batch.py`).
+- **`retrieve_batches.py --batch_id` for Anthropic is still `NotImplementedError`**
+  (`retrieve_queries()` at api.py:331-332 only handles `api == "openai"`) — left alone,
+  out of scope, flagged rather than silently "fixed."
+- **Batch mode is still only implemented for `api: openai` / `api: anthropic`**
+  (api.py:107-109 forces `batch_processing=False` with a warning for every other
+  provider) — Groq/Gemini/OpenRouter/Opencode batch is new implementation work, not
+  part of this fix, not done.
+- **Config flips NOT made.** No `configs/models/{openai,anthropic}/*.yaml` were
+  flipped to `batch_processing: true` — neither `sycophancy_recent.yaml` nor
+  `sycophancy_verify.yaml` currently point at a wired frontier OpenAI/Anthropic model
+  (both reference `openai/gpt-5.6-luna`, itself a non-existent model id, unrelated
+  bug flagged separately). `o3-mini--high.yaml` / `o4-mini--high.yaml` already had
+  `batch_processing: true` pre-existing — left as-is, now actually safe. Flip other
+  configs only when a specific reportable run is picked (batch jobs have up to a 24h
+  completion window — offline full-dataset runs only, not live smoke tests).
+- **Docs updated:** `CLAUDE.md` rule #6 reworded, `CODE-AUDIT.md` #5 marked FIXED.
+
 ## 2026-08-20 — OpenRouter provider added + smoke LIVE: gemma-4-26b-a4b-it:free (OpenRouter) solver × gpt-5-mini-medium judge
 
 New provider `openrouter` wired for the demo. FINDING: unlike groq/opencode, no

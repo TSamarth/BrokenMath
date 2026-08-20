@@ -1,0 +1,17 @@
+# OpenRouter beta Batch API (POST/GET api/beta/batches) — new code path added 2026-08-21.
+# Only `:batch`-suffixed model slugs are batch-eligible; confirmed live via
+# GET https://openrouter.ai/api/v1/models on 2026-08-21. Neither of the other
+# OpenRouter configs (`:free` models) has a `:batch` variant.
+#
+# supported_parameters for this model does NOT list temperature/top_p (reasoning is
+# mandatory instead) — leave both null so kwarg_remover strips them (api.py:207-209).
+model: google/gemini-3.7-flash:batch
+api: openrouter
+temperature: null
+top_p: null
+max_tokens: 8192
+read_cost: 0.1875
+write_cost: 0.9375
+human_readable_id: Gemini 3.7 Flash (OpenRouter Batch)
+batch_processing: true
+date: "2026-08-21"
