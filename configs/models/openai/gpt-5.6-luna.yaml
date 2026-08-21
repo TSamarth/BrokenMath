@@ -4,12 +4,12 @@ max_tokens: 120000
 read_cost: 0.25
 write_cost: 2
 concurrent_requests: 5
-reasoning: {effort: high}
+reasoning:
+  effort: high
+  summary: "auto"
 temperature: 1.0
 top_p: 0.95
 human_readable_id: GPT-5.6-luna
 batch_processing: true
 openai_responses: true
 date: "2026-08-20"
-reasoning:
-  summary: "auto"
