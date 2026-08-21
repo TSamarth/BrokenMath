@@ -207,7 +207,7 @@ class APIQuery:
         for kwarg in ["top_p", "top_k", "temperature"]:
             if kwarg in kwargs and kwargs[kwarg] is None:
                 del kwargs[kwarg]
-        if (api == "anthropic" and "claude-3-7" in model) or (("o1" in model or "o3" in model) and api == "openai"):
+        if (api == "anthropic" and "claude-3-7" in model) or (("o1" in model or "o3" in model or "gpt-5" in model) and api == "openai"):
             for kwarg_to_remove in ["top_p", "top_k", "temperature"]:
                 if kwarg_to_remove in kwargs:
                     logger.info(f"Removing {kwarg_to_remove} parameter for {model} model.")
@@ -880,7 +880,7 @@ class APIQuery:
             request = {
                 "custom_id": f"apiquery-{i}",
                 "method": "POST",
-                "url": "/v1/chat/responses",
+                "url": "/v1/chat/completions",
                 "body": {
                     "model": self.model,
                     "messages": query[0],
@@ -926,14 +926,17 @@ class APIQuery:
                 tmp_path = tmp.name
 
             try:
-                batch_input_file = client.files.create(
-                    file=open(tmp_path, "rb"),
-                    purpose="batch"
-                )
+                # `with` closes the handle before os.remove, else Windows locks the
+                # temp file (WinError 32) on both success and error paths.
+                with open(tmp_path, "rb") as batch_input_fh:
+                    batch_input_file = client.files.create(
+                        file=batch_input_fh,
+                        purpose="batch"
+                    )
 
                 batch = client.batches.create(
                     input_file_id=batch_input_file.id,
-                    endpoint="/v1/chat/responses",
+                    endpoint="/v1/chat/completions",
                     completion_window="24h",
                 )
                 batch_jobs.append({

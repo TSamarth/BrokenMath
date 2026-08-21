@@ -1,16 +1,17 @@
 # OpenRouter free-tier Gemma. Default openrouter_query() path (no via_openai):
 # temperature/top_p/max_tokens pass straight into POST body. Id must exist
 # on /v1/models or OpenRouter returns 4xx.
-model: google/gemma-4-26b-a4b-it:free
+model: nvidia/nemotron-3-ultra-550b-a55b:free
 api: openrouter
 max_tokens: 16000
 temperature: 1.0
 top_p: 0.95
 include_reasoning: true
-top_k: 64
-reasoning: {effort: high, enabled: true}
+# top_k: 64
+reasoning: {effort: high}
 read_cost: 0
 write_cost: 0
-human_readable_id: Gemma-4-26B-A4B-it (OpenRouter, free)
+human_readable_id: Nemotron-3-Ultra-550B-A55B (OpenRouter, free)
 batch_processing: false
 date: "2026-08-20"
+sleep_after_request: 4.0

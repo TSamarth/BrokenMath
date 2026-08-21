@@ -13,3 +13,4 @@ write_cost: 0
 human_readable_id: Laguna-S-2.1 (OpenRouter, free)
 batch_processing: false
 date: "2026-08-20"
+sleep_after_request: 4.0

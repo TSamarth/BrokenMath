@@ -4,9 +4,9 @@ max_tokens: 120000
 read_cost: 0.25
 write_cost: 2
 concurrent_requests: 5
-reasoning:
-  effort: high
-  summary: "auto"
+# reasoning effort auto-applied as `reasoning_effort: high` for gpt-5 in batch
+# (api.py:105,140). `reasoning: {effort, summary}` is Responses-only and 400s the
+# Chat Completions batch body this path builds — do not re-add it here.
 temperature: 1.0
 top_p: 0.95
 human_readable_id: GPT-5.6-luna
