@@ -880,7 +880,7 @@ class APIQuery:
             request = {
                 "custom_id": f"apiquery-{i}",
                 "method": "POST",
-                "url": "/v1/chat/completions",
+                "url": "/v1/chat/responses",
                 "body": {
                     "model": self.model,
                     "messages": query[0],
@@ -933,7 +933,7 @@ class APIQuery:
 
                 batch = client.batches.create(
                     input_file_id=batch_input_file.id,
-                    endpoint="/v1/chat/completions",
+                    endpoint="/v1/chat/responses",
                     completion_window="24h",
                 )
                 batch_jobs.append({

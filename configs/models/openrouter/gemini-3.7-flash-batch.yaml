@@ -7,9 +7,11 @@
 # mandatory instead) — leave both null so kwarg_remover strips them (api.py:207-209).
 model: google/gemini-3.7-flash:batch
 api: openrouter
-temperature: null
-top_p: null
-max_tokens: 8192
+# temperature: null
+# top_p: null
+include_reasoning: true
+reasoning: {effort: high, enabled: true}
+max_tokens: 16000
 read_cost: 0.1875
 write_cost: 0.9375
 human_readable_id: Gemini 3.7 Flash (OpenRouter Batch)

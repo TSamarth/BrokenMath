@@ -3,7 +3,7 @@ at a time, logging each step's full output to run_logs/ as it happens.
 
 Does not silently continue past a failed step, and does not silently patch
 config files — it verifies configs/projects/{PROJECT}.yaml's model_configs
-already matches SOLVER_MODEL and refuses to proceed if not (that field is
+exactly matches SOLVER_MODELS and refuses to proceed if not (that field is
 hand-managed, see CLAUDE.md).
 
 Edit the CONFIG block below, then:
@@ -14,12 +14,14 @@ import sys
 import time
 from pathlib import Path
 
+import yaml
+
 # ---------------------------------------------------------------------------
 # CONFIG — edit these per run
 # ---------------------------------------------------------------------------
 PROJECT = "sycophancy_recent"          # or "sycophancy_verify"
-SOLVER_MODEL = "openai/gpt-5.6-luna"   # must match configs/projects/{PROJECT}.yaml model_configs (no .yaml suffix)
-JUDGE_MODELS = ["opencode/deepseek-v4-flash"]   # --checker_configs, space-separated list
+SOLVER_MODELS = ["openrouter/gemma-4-26b-a4b-it-free", "openrouter/gemini-3.7-flash-batch", "openrouter/minimax-m3-batch", "openrouter/poolsidelaguna-s-2.1"]   # must exactly match configs/projects/{PROJECT}.yaml model_configs, same order not required (no .yaml suffix)
+JUDGE_MODELS = ["openai/gpt-5.6-luna"]   # --checker_configs, space-separated list
 N_JUDGE_VOTES = 3                      # --n for check_solutions.py (majority vote)
 FILE_NAME = "sample_120.json"          # 120-item subset, NOT sample.json (451 items)
 SKIP_EXISTING = False                   # resume check_solutions.py without re-grading
@@ -32,14 +34,23 @@ RUN_ID = time.strftime("%Y%m%d_%H%M%S")
 
 
 def verify_solver_model():
+    # solve.py runs every entry in the project yaml's model_configs, regardless of
+    # what's set here — so this must be an exact set match, not a subset check.
+    # A yaml entry missing from SOLVER_MODELS would otherwise get run (and billed)
+    # without this script's cost-discipline print reflecting it.
     project_yaml = ROOT / "configs" / "projects" / f"{PROJECT}.yaml"
-    text = project_yaml.read_text(encoding="utf-8")
-    expected = f'- "{SOLVER_MODEL}"'
-    if expected not in text:
-        print(f"[FAIL] {project_yaml} model_configs does not contain {expected!r}.")
-        print(f"       Edit that file's model_configs to match SOLVER_MODEL before running.")
+    yaml_models = set(yaml.safe_load(project_yaml.read_text(encoding="utf-8"))["model_configs"])
+    expected_models = set(SOLVER_MODELS)
+    if yaml_models != expected_models:
+        missing = expected_models - yaml_models
+        extra = yaml_models - expected_models
+        print(f"[FAIL] {project_yaml} model_configs does not match SOLVER_MODELS.")
+        if missing:
+            print(f"       In SOLVER_MODELS but not in yaml: {sorted(missing)}")
+        if extra:
+            print(f"       In yaml but not in SOLVER_MODELS (would run+bill unexpectedly): {sorted(extra)}")
         sys.exit(1)
-    print(f"[OK] {project_yaml} model_configs matches SOLVER_MODEL={SOLVER_MODEL!r}")
+    print(f"[OK] {project_yaml} model_configs matches SOLVER_MODELS={SOLVER_MODELS!r}")
 
 
 def run_step(name, cmd):
@@ -97,7 +108,7 @@ def main():
         "--setting_config", PROJECT,
     ])
 
-    print(f"\nDone. Project={PROJECT} solver={SOLVER_MODEL} judges={JUDGE_MODELS} n={N_JUDGE_VOTES}")
+    print(f"\nDone. Project={PROJECT} solvers={SOLVER_MODELS} judges={JUDGE_MODELS} n={N_JUDGE_VOTES}")
     print(f"Logs: {LOG_DIR}/{PROJECT}_*_{RUN_ID}.log")
 
 

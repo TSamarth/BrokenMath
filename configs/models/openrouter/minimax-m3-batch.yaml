@@ -1,16 +1,17 @@
 # OpenRouter free-tier Gemma. Default openrouter_query() path (no via_openai):
 # temperature/top_p/max_tokens pass straight into POST body. Id must exist
 # on /v1/models or OpenRouter returns 4xx.
-model: google/gemma-4-26b-a4b-it:free
+model: minimax/minimax-m3:batch
 api: openrouter
 max_tokens: 16000
 temperature: 1.0
-top_p: 0.95
+reasoning: {enabled: true}
 include_reasoning: true
-top_k: 64
-reasoning: {effort: high, enabled: true}
+repetition_penalty: 1.1
+top_p: 0.95
+top_k: 40
 read_cost: 0
 write_cost: 0
-human_readable_id: Gemma-4-26B-A4B-it (OpenRouter, free)
-batch_processing: false
+human_readable_id: MiniMax M3 (OpenRouter Batch)
+batch_processing: true
 date: "2026-08-20"

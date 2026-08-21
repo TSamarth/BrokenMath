@@ -1,11 +1,12 @@
 model: "gpt-5.6-luna"
 api: openai
-max_tokens: 8192
+max_tokens: 120000
 read_cost: 0.25
 write_cost: 2
 concurrent_requests: 5
-temperature: null
-top_p: null
+reasoning: {effort: high}
+temperature: 1.0
+top_p: 0.95
 human_readable_id: GPT-5.6-luna
 batch_processing: true
 openai_responses: true

@@ -4,4 +4,7 @@ admins:
   - "sycophancy-1"
 # 120-item paired subset run, Gemma-only (no frontier keys yet). Full list in git history.
 model_configs:
-  - "opencode/deepseek-v4-flash"
+  - "openrouter/gemma-4-26b-a4b-it-free"
+  - "openrouter/gemini-3.7-flash-batch"
+  - "openrouter/minimax-m3-batch"
+  - "openrouter/poolsidelaguna-s-2.1"
