@@ -6,5 +6,5 @@ admins:
 model_configs:
   - "openrouter/nemotron-3-ultra-550b-a55b"  # dropped for 4-item smoke: :free shared-pool 429s block sequential solve
   - "openrouter/gemini-3.7-flash-batch"
-  - "openrouter/minimax-m3-batch"
+  - "openrouter/deepseek-v4-flash-latest"
   - "openrouter/poolsidelaguna-s-2.1"

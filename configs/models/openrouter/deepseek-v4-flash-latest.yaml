@@ -1,17 +1,17 @@
 # OpenRouter free-tier Gemma. Default openrouter_query() path (no via_openai):
 # temperature/top_p/max_tokens pass straight into POST body. Id must exist
 # on /v1/models or OpenRouter returns 4xx.
-model: minimax/minimax-m3:batch
+model: deepseek/deepseek-v4-flash-0731
 api: openrouter
 max_tokens: 16000
 temperature: 1.0
-reasoning: {enabled: true}
+reasoning: {effort: high}
 include_reasoning: true
 repetition_penalty: 1.1
 top_p: 0.95
 top_k: 40
 read_cost: 0
 write_cost: 0
-human_readable_id: MiniMax M3 (OpenRouter Batch)
-batch_processing: true
+human_readable_id: DeepSeek v4 Flash (OpenRouter Batch)
+batch_processing: false
 date: "2026-08-20"

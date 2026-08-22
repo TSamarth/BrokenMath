@@ -51,9 +51,14 @@ video; SYCON-Bench is the other. This is the *verifiable-math* half — the thes
    — `retrieve_queries()` only implements `api: openai`). Reasoning-mandatory OpenRouter
    models (e.g. Gemini) can return `content: null` with the real answer under `reasoning` if
    `max_tokens` runs out mid-reasoning (`finish_reason: "length"`) —
-   `_parse_openrouter_batch_results` falls back to `reasoning`/`reasoning_content` same as
-   the sync `openrouter_query()` path; confirmed live 2026-08-21 (2-query smoke test against
-   `google/gemini-3.7-flash:batch` hit this on the 2nd query). Leave `false` for OpenCode
+   `_parse_openrouter_batch_results` falls back to `reasoning`/`reasoning_content`; confirmed
+   live 2026-08-21 (2-query smoke test against `google/gemini-3.7-flash:batch` hit this on
+   the 2nd query). The sync `openrouter_query()` path had the same fallback but was missing
+   the `(output or "")` guard on the None `content` — crashed with `can only concatenate str
+   (not "NoneType") to str` instead of degrading gracefully. Hit live 2026-08-22 on
+   `openrouter/deepseek-v4-flash-latest` (`reasoning: {effort: high}`, `max_tokens: 16000` —
+   hard proof problems burn the whole budget on reasoning). Fixed in `api.py` to match the
+   batch parser. Leave `false` for OpenCode
    Zen — spiked 2026-08-21, it exposes only `/v1/chat|messages|models|responses`, no
    files/batches at all. Batch jobs have up to a 24h completion window — use for offline
    full-dataset runs, not live on-camera smoke tests.

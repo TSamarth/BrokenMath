@@ -15,3 +15,4 @@ human_readable_id: Nemotron-3-Ultra-550B-A55B (OpenRouter, free)
 batch_processing: false
 date: "2026-08-20"
 sleep_after_request: 4.0
+concurrent_requests: 2

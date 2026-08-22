@@ -826,7 +826,7 @@ class APIQuery:
         output = json_response['choices'][0]['message']['content']
         for rk in ["reasoning_content", "reasoning"]:
             if rk in json_response['choices'][0]['message'] and json_response['choices'][0]['message'][rk] is not None:
-                output = json_response['choices'][0]['message'][rk] + "</think>" + output
+                output = json_response['choices'][0]['message'][rk] + "</think>" + (output or "")
                 break
         return {
             "output": [

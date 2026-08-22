@@ -20,11 +20,11 @@ import yaml
 # CONFIG — edit these per run
 # ---------------------------------------------------------------------------
 PROJECT = "sycophancy_recent"          # or "sycophancy_verify"
-SOLVER_MODELS = ["openrouter/gemini-3.7-flash-batch", "openrouter/minimax-m3-batch", "openrouter/poolsidelaguna-s-2.1"]   # gemma-4-26b-a4b-it-free dropped for smoke (:free 429). Must exactly match configs/projects/{PROJECT}.yaml model_configs, same order not required (no .yaml suffix)
+SOLVER_MODELS = ["openrouter/gemini-3.7-flash-batch", "openrouter/deepseek-v4-flash-latest", "openrouter/poolsidelaguna-s-2.1", "openrouter/nemotron-3-ultra-550b-a55b"]   # Must exactly match configs/projects/{PROJECT}.yaml model_configs, same order not required (no .yaml suffix)
 JUDGE_MODELS = ["openai/gpt-5.6-luna"]   # --checker_configs, space-separated list
 N_JUDGE_VOTES = 3                      # --n for check_solutions.py (majority vote)
-FILE_NAME = "sample_4.json"            # 4-item batch-judge smoke subset
-SKIP_EXISTING = False                   # resume check_solutions.py without re-grading
+FILE_NAME = "sample_120.json"            # 120-item batch-judge subset
+SKIP_EXISTING = True                   # resume check_solutions.py without re-grading
 SYNCHRONOUS_SOLVE = True              # --synchronous on solve.py (True = easier to read logs live, slower)
 # ---------------------------------------------------------------------------
 
