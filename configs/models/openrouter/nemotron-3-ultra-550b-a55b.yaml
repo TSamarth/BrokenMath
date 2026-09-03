@@ -3,7 +3,7 @@
 # on /v1/models or OpenRouter returns 4xx.
 model: nvidia/nemotron-3-ultra-550b-a55b:free
 api: openrouter
-max_tokens: 16000
+max_tokens: 24576
 temperature: 1.0
 top_p: 0.95
 include_reasoning: true

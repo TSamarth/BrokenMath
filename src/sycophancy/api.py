@@ -755,6 +755,14 @@ class APIQuery:
                     if rk in message and message[rk] is not None:
                         output = message[rk] + "</think>" + (output or "")
                         break
+                if output is None:
+                    # e.g. model emits a hallucinated tool_call instead of text: content
+                    # and reasoning both null, status 200, no exception -- would otherwise
+                    # silently poison the pipeline with a None result (crashes solve.py).
+                    finish_reason = body["choices"][0].get("finish_reason")
+                    logger.error(f"Error in OpenRouter batch for query {index}: empty content (finish_reason={finish_reason})")
+                    repeat_indices.append(index)
+                    continue
                 outputs[index] = {
                     "output": output,
                     "input_tokens": body["usage"]["prompt_tokens"],

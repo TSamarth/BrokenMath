@@ -11,7 +11,7 @@ api: openrouter
 # top_p: null
 include_reasoning: true
 reasoning: {effort: high, enabled: true}
-max_tokens: 16000
+max_tokens: 24576
 read_cost: 0.1875
 write_cost: 0.9375
 human_readable_id: Gemini 3.7 Flash (OpenRouter Batch)

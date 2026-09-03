@@ -1,0 +1,481 @@
+,judge,solver,solver_id,problem,competition,true_grade,split,cost,confidence,incorrect,resolved
+0,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,allrussian_2025_12,allrussian,incorrect,generic,0.0,,True,True
+1,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,allrussian_2025_6,allrussian,detected,generic,0.0,,False,True
+2,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,allrussian_2025_7,allrussian,detected,generic,0.0,,False,True
+3,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,allrussian_2025_9,allrussian,correct,generic,0.0,,False,True
+4,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_A_2025_3,bmosl,corrected,generic,0.0,,False,True
+5,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_A_2025_4,bmosl,detected,generic,0.0,,False,True
+6,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_C_2025_3,bmosl,incorrect,generic,0.0,,True,True
+7,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_G_2025_2,bmosl,incorrect,generic,0.0,,True,True
+8,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_G_2025_4,bmosl,incorrect,generic,0.0,,True,True
+9,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_G_2025_5,bmosl,corrected,generic,0.0,,False,True
+10,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_NT_2025_2,bmosl,correct,generic,0.0,,False,True
+11,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmosl_NT_2025_6,bmosl,correct,generic,0.0,,False,True
+12,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bmo_2025_1,bmo,incorrect,generic,0.0,,True,True
+13,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bulgaria_2025_2,bulgaria,correct,generic,0.0,,False,True
+14,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bulgaria_2025_4,bulgaria,incorrect,generic,0.0,,True,True
+15,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,bulgaria_2025_6,bulgaria,detected,generic,0.0,,False,True
+16,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,canada_2025_1,canada,corrected,generic,0.0,,False,True
+17,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,chinatst_2025_10,chinatst,incorrect,generic,0.0,,True,True
+18,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,chinatst_2025_18,chinatst,detected,generic,0.0,,False,True
+19,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,chinatst_2025_5,chinatst,incorrect,generic,0.0,,True,True
+20,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,chinatst_2025_7,chinatst,incorrect,generic,0.0,,True,True
+21,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,chinatst_2025_9,chinatst,detected,generic,0.0,,False,True
+22,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,china_2025_1,china,,generic,0.0,,False,False
+23,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,egmo_2025_4,egmo,incorrect,generic,0.0,,True,True
+24,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_C_2025_2,elmosl,incorrect,generic,0.0,,True,True
+25,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_C_2025_5,elmosl,incorrect,generic,0.0,,True,True
+26,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_G_2025_2,elmosl,incorrect,generic,0.0,,True,True
+27,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_G_2025_3,elmosl,incorrect,generic,0.0,,True,True
+28,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_G_2025_5,elmosl,incorrect,generic,0.0,,True,True
+29,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_G_2025_6,elmosl,incorrect,generic,0.0,,True,True
+30,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_G_2025_7,elmosl,detected,generic,0.0,,False,True
+31,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_G_2025_9,elmosl,incorrect,generic,0.0,,True,True
+32,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_NT_2025_2,elmosl,correct,generic,0.0,,False,True
+33,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_NT_2025_3,elmosl,detected,generic,0.0,,False,True
+34,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,elmosl_NT_2025_5,elmosl,incorrect,generic,0.0,,True,True
+35,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,german_2025_4,german,incorrect,generic,0.0,,True,True
+36,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_14,imosl,detected,generic,0.0,,False,True
+37,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_15,imosl,incorrect,generic,0.0,,True,True
+38,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_16,imosl,incorrect,generic,0.0,,True,True
+39,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_17,imosl,detected,generic,0.0,,False,True
+40,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_19,imosl,incorrect,generic,0.0,,True,True
+41,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_20,imosl,incorrect,generic,0.0,,True,True
+42,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_26,imosl,correct,generic,0.0,,False,True
+43,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_28,imosl,incorrect,generic,0.0,,True,True
+44,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_4,imosl,incorrect,generic,0.0,,True,True
+45,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,imosl_2025_9,imosl,correct,generic,0.0,,False,True
+46,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_2025_6,india,incorrect,generic,0.0,,True,True
+47,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_10,india,incorrect,generic,0.0,,True,True
+48,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_12,india,incorrect,generic,0.0,,True,True
+49,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_17,india,incorrect,generic,0.0,,True,True
+50,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_19,india,incorrect,generic,0.0,,True,True
+51,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_20,india,incorrect,generic,0.0,,True,True
+52,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_21,india,incorrect,generic,0.0,,True,True
+53,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_5,india,detected,generic,0.0,,False,True
+54,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,india_prep_2025_9,india,corrected,generic,0.0,,False,True
+55,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,iran_tst_2025_1,iran,incorrect,generic,0.0,,True,True
+56,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,iran_tst_2025_9,iran,incorrect,generic,0.0,,True,True
+57,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,israel_tst_2025_2,israel,incorrect,generic,0.0,,True,True
+58,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,izho_2025_2,izho,incorrect,generic,0.0,,True,True
+59,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,izho_2025_4,izho,incorrect,generic,0.0,,True,True
+60,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_aime_aime_2025_1,matharena,correct,matharena,0.0,,False,True
+61,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_aime_aime_2025_12,matharena,corrected,matharena,0.0,,False,True
+62,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_aime_aime_2025_15,matharena,incorrect,matharena,0.0,,True,True
+63,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_aime_aime_2025_16,matharena,correct,matharena,0.0,,False,True
+64,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_aime_aime_2025_6,matharena,correct,matharena,0.0,,False,True
+65,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_aime_aime_2025_9,matharena,detected,matharena,0.0,,False,True
+66,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_22,matharena,correct,matharena,0.0,,False,True
+67,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_23,matharena,correct,matharena,0.0,,False,True
+68,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_28,matharena,incorrect,matharena,0.0,,True,True
+69,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_30,matharena,corrected,matharena,0.0,,False,True
+70,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_6,matharena,incorrect,matharena,0.0,,True,True
+71,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_8,matharena,correct,matharena,0.0,,False,True
+72,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_10,matharena,correct,matharena,0.0,,False,True
+73,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_15,matharena,detected,matharena,0.0,,False,True
+74,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_20,matharena,incorrect,matharena,0.0,,True,True
+75,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_21,matharena,incorrect,matharena,0.0,,True,True
+76,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_27,matharena,incorrect,matharena,0.0,,True,True
+77,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_28,matharena,correct,matharena,0.0,,False,True
+78,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_3,matharena,,matharena,0.0,,False,False
+79,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_34,matharena,incorrect,matharena,0.0,,True,True
+80,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_39,matharena,detected,matharena,0.0,,False,True
+81,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_6,matharena,incorrect,matharena,0.0,,True,True
+82,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_8,matharena,detected,matharena,0.0,,False,True
+83,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_11,matharena,correct,matharena,0.0,,False,True
+84,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_12,matharena,incorrect,matharena,0.0,,True,True
+85,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_16,matharena,incorrect,matharena,0.0,,True,True
+86,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_18,matharena,incorrect,matharena,0.0,,True,True
+87,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_2,matharena,correct,matharena,0.0,,False,True
+88,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_22,matharena,correct,matharena,0.0,,False,True
+89,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_25,matharena,incorrect,matharena,0.0,,True,True
+90,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_28,matharena,correct,matharena,0.0,,False,True
+91,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_8,matharena,correct,matharena,0.0,,False,True
+92,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,nordic_2025_1,nordic,correct,generic,0.0,,False,True
+93,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,nordic_2025_2,nordic,correct,generic,0.0,,False,True
+94,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,pan_african_2025_5,pan,correct,generic,0.0,,False,True
+95,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,philippines_2025_1,philippines,incorrect,generic,0.0,,True,True
+96,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,philippines_2025_4,philippines,incorrect,generic,0.0,,True,True
+97,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,philippines_2025_6,philippines,incorrect,generic,0.0,,True,True
+98,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,polish_2025_2,polish,detected,generic,0.0,,False,True
+99,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,polish_2025_4,polish,,generic,0.0,,False,False
+100,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,romania_10_2025_1,romania,incorrect,generic,0.0,,True,True
+101,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,romania_10_2025_3,romania,detected,generic,0.0,,False,True
+102,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,romania_tst_2025_2,romania,incorrect,generic,0.0,,True,True
+103,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,spain_2025_2,spain,detected,generic,0.0,,False,True
+104,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,thai_2025_10,thai,detected,generic,0.0,,False,True
+105,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,thai_2025_2,thai,corrected,generic,0.0,,False,True
+106,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,thai_2025_3,thai,detected,generic,0.0,,False,True
+107,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,thai_2025_5,thai,incorrect,generic,0.0,,True,True
+108,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,thai_2025_8,thai,incorrect,generic,0.0,,True,True
+109,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,turkey_tst_2025_2,turkey,incorrect,generic,0.0,,True,True
+110,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,turkey_tst_2025_4,turkey,detected,generic,0.0,,False,True
+111,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,usamo_2025_1,usamo,detected,generic,0.0,,False,True
+112,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,usamo_2025_3,usamo,incorrect,generic,0.0,,True,True
+113,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,usamo_2025_5,usamo,corrected,generic,0.0,,False,True
+114,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,usamo_2025_6,usamo,incorrect,generic,0.0,,True,True
+115,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,usatst_2025_3,usatst,detected,generic,0.0,,False,True
+116,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,usatst_2025_6,usatst,,generic,0.0,,False,False
+117,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,vietnam_2025_1,vietnam,correct,generic,0.0,,False,True
+118,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,vietnam_2025_3,vietnam,incorrect,generic,0.0,,True,True
+119,GPT-5.6-luna,DeepSeek v4 Flash (OpenRouter Batch),,vietnam_2025_6,vietnam,corrected,generic,0.0,,False,True
+120,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,allrussian_2025_12,allrussian,incorrect,generic,0.0150714375,,True,True
+121,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,allrussian_2025_6,allrussian,detected,generic,0.02136525,,False,True
+122,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,allrussian_2025_7,allrussian,incorrect,generic,0.0294598125,,True,True
+123,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,allrussian_2025_9,allrussian,corrected,generic,0.013323,,False,True
+124,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_A_2025_3,bmosl,incorrect,generic,0.02946225,,True,True
+125,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_A_2025_4,bmosl,detected,generic,0.01505925,,False,True
+126,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_C_2025_3,bmosl,detected,generic,0.015073875,,False,True
+127,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_G_2025_2,bmosl,incorrect,generic,0.015064875,,True,True
+128,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_G_2025_4,bmosl,incorrect,generic,0.0150669375,,True,True
+129,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_G_2025_5,bmosl,corrected,generic,0.0145486875,,False,True
+130,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_NT_2025_2,bmosl,incorrect,generic,0.0150495,,True,True
+131,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmosl_NT_2025_6,bmosl,incorrect,generic,0.01505925,,True,True
+132,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bmo_2025_1,bmo,incorrect,generic,0.0150714375,,True,True
+133,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bulgaria_2025_2,bulgaria,detected,generic,0.015083625,,False,True
+134,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bulgaria_2025_4,bulgaria,incorrect,generic,0.0150650625,,True,True
+135,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,bulgaria_2025_6,bulgaria,corrected,generic,0.0151123125,,False,True
+136,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,canada_2025_1,canada,incorrect,generic,0.015080625,,True,True
+137,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,chinatst_2025_10,chinatst,corrected,generic,0.0124550625,,False,True
+138,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,chinatst_2025_18,chinatst,incorrect,generic,0.0150811875,,True,True
+139,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,chinatst_2025_5,chinatst,incorrect,generic,0.0294609375,,True,True
+140,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,chinatst_2025_7,chinatst,incorrect,generic,0.0150965625,,True,True
+141,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,chinatst_2025_9,chinatst,incorrect,generic,0.0150770625,,True,True
+142,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,china_2025_1,china,detected,generic,0.015081,,False,True
+143,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,egmo_2025_4,egmo,incorrect,generic,0.026023875,,True,True
+144,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_C_2025_2,elmosl,incorrect,generic,0.0150639375,,True,True
+145,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_C_2025_5,elmosl,incorrect,generic,0.015094125,,True,True
+146,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_G_2025_2,elmosl,incorrect,generic,0.015061125,,True,True
+147,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_G_2025_3,elmosl,incorrect,generic,0.0150616875,,True,True
+148,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_G_2025_5,elmosl,incorrect,generic,0.0150609375,,True,True
+149,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_G_2025_6,elmosl,incorrect,generic,0.0294609375,,True,True
+150,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_G_2025_7,elmosl,detected,generic,0.0150661875,,False,True
+151,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_G_2025_9,elmosl,incorrect,generic,0.0294714375,,True,True
+152,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_NT_2025_2,elmosl,correct,generic,0.015051375,,False,True
+153,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_NT_2025_3,elmosl,detected,generic,0.0150553125,,False,True
+154,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,elmosl_NT_2025_5,elmosl,detected,generic,0.01506225,,False,True
+155,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,german_2025_4,german,incorrect,generic,0.015049875,,True,True
+156,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_14,imosl,incorrect,generic,0.0150695625,,True,True
+157,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_15,imosl,incorrect,generic,0.0150669375,,True,True
+158,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_16,imosl,incorrect,generic,0.0294675,,True,True
+159,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_17,imosl,detected,generic,0.015067875,,False,True
+160,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_19,imosl,incorrect,generic,0.029468625,,True,True
+161,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_20,imosl,incorrect,generic,0.0150631875,,True,True
+162,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_26,imosl,incorrect,generic,0.015055875,,True,True
+163,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_28,imosl,detected,generic,0.0150555,,False,True
+164,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_4,imosl,detected,generic,0.015070125,,False,True
+165,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,imosl_2025_9,imosl,detected,generic,0.0147774375,,False,True
+166,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_2025_6,india,incorrect,generic,0.0150613125,,True,True
+167,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_10,india,detected,generic,0.015069,,False,True
+168,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_12,india,incorrect,generic,0.015058875,,True,True
+169,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_17,india,corrected,generic,0.0150796875,,False,True
+170,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_19,india,incorrect,generic,0.015049875,,True,True
+171,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_20,india,incorrect,generic,0.029464875,,True,True
+172,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_21,india,incorrect,generic,0.0234620625,,True,True
+173,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_5,india,incorrect,generic,0.0150691875,,True,True
+174,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,india_prep_2025_9,india,correct,generic,0.0100475625,,False,True
+175,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,iran_tst_2025_1,iran,detected,generic,0.0150654375,,False,True
+176,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,iran_tst_2025_9,iran,incorrect,generic,0.0294665625,,True,True
+177,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,israel_tst_2025_2,israel,incorrect,generic,0.01506975,,True,True
+178,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,izho_2025_2,izho,incorrect,generic,0.015069,,True,True
+179,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,izho_2025_4,izho,incorrect,generic,0.015066,,True,True
+180,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_aime_aime_2025_1,matharena,detected,matharena,0.010894125,,False,True
+181,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_aime_aime_2025_12,matharena,incorrect,matharena,0.0150645,,True,True
+182,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_aime_aime_2025_15,matharena,detected,matharena,0.01505775,,False,True
+183,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_aime_aime_2025_16,matharena,correct,matharena,0.009854625,,False,True
+184,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_aime_aime_2025_6,matharena,correct,matharena,0.0103085625,,False,True
+185,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_aime_aime_2025_9,matharena,incorrect,matharena,0.015054375,,True,True
+186,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_22,matharena,incorrect,matharena,0.0150538125,,True,True
+187,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_23,matharena,correct,matharena,0.009221625,,False,True
+188,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_28,matharena,incorrect,matharena,0.028665,,True,True
+189,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_30,matharena,incorrect,matharena,0.0150748125,,True,True
+190,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_6,matharena,correct,matharena,0.013342125,,False,True
+191,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_brumo_brumo_2025_8,matharena,incorrect,matharena,0.0150609375,,True,True
+192,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_10,matharena,correct,matharena,0.0101566875,,False,True
+193,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_15,matharena,detected,matharena,0.0294654375,,False,True
+194,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_20,matharena,detected,matharena,0.015064125,,False,True
+195,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_21,matharena,incorrect,matharena,0.029454375,,True,True
+196,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_27,matharena,incorrect,matharena,0.0150838125,,True,True
+197,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_28,matharena,incorrect,matharena,0.02946675,,True,True
+198,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_3,matharena,correct,matharena,0.0125176875,,False,True
+199,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_34,matharena,incorrect,matharena,0.0150680625,,True,True
+200,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_39,matharena,incorrect,matharena,0.0150635625,,True,True
+201,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_6,matharena,incorrect,matharena,0.01505625,,True,True
+202,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_cmimc_cmimc_2025_8,matharena,detected,matharena,0.015065625,,False,True
+203,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_11,matharena,correct,matharena,0.015055875,,False,True
+204,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_12,matharena,incorrect,matharena,0.015059625,,True,True
+205,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_16,matharena,incorrect,matharena,0.0150556875,,True,True
+206,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_18,matharena,corrected,matharena,0.029473875,,False,True
+207,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_2,matharena,correct,matharena,0.0150609375,,False,True
+208,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_22,matharena,incorrect,matharena,0.0150585,,True,True
+209,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_25,matharena,incorrect,matharena,0.0150598125,,True,True
+210,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_28,matharena,corrected,matharena,0.0211336875,,False,True
+211,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,matharena_hmmt_hmmt_feb_2025_8,matharena,correct,matharena,0.00753825,,False,True
+212,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,nordic_2025_1,nordic,detected,generic,0.015058875,,False,True
+213,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,nordic_2025_2,nordic,correct,generic,0.0144069375,,False,True
+214,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,pan_african_2025_5,pan,detected,generic,0.02197725,,False,True
+215,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,philippines_2025_1,philippines,detected,generic,0.015055125,,False,True
+216,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,philippines_2025_4,philippines,incorrect,generic,0.0150714375,,True,True
+217,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,philippines_2025_6,philippines,incorrect,generic,0.015067125,,True,True
+218,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,polish_2025_2,polish,detected,generic,0.0150556875,,False,True
+219,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,polish_2025_4,polish,detected,generic,0.014907,,False,True
+220,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,romania_10_2025_1,romania,correct,generic,0.0198135,,False,True
+221,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,romania_10_2025_3,romania,incorrect,generic,0.015059625,,True,True
+222,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,romania_tst_2025_2,romania,detected,generic,0.024607125,,False,True
+223,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,spain_2025_2,spain,incorrect,generic,0.015058125,,True,True
+224,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,thai_2025_10,thai,incorrect,generic,0.0150609375,,True,True
+225,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,thai_2025_2,thai,correct,generic,0.015054,,False,True
+226,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,thai_2025_3,thai,detected,generic,0.015060375,,False,True
+227,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,thai_2025_5,thai,detected,generic,0.0150781875,,False,True
+228,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,thai_2025_8,thai,incorrect,generic,0.0150710625,,True,True
+229,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,turkey_tst_2025_2,turkey,incorrect,generic,0.0150789375,,True,True
+230,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,turkey_tst_2025_4,turkey,incorrect,generic,0.015064125,,True,True
+231,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,usamo_2025_1,usamo,incorrect,generic,0.0150549375,,True,True
+232,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,usamo_2025_3,usamo,incorrect,generic,0.015086625,,True,True
+233,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,usamo_2025_5,usamo,incorrect,generic,0.02945775,,True,True
+234,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,usamo_2025_6,usamo,incorrect,generic,0.015072,,True,True
+235,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,usatst_2025_3,usatst,detected,generic,0.01507125,,False,True
+236,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,usatst_2025_6,usatst,detected,generic,0.015058875,,False,True
+237,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,vietnam_2025_1,vietnam,incorrect,generic,0.015069,,True,True
+238,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,vietnam_2025_3,vietnam,incorrect,generic,0.0150931875,,True,True
+239,GPT-5.6-luna,Gemini 3.7 Flash (OpenRouter Batch),,vietnam_2025_6,vietnam,detected,generic,0.01505925,,False,True
+240,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,allrussian_2025_12,allrussian,detected,generic,0.0,,False,True
+241,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,allrussian_2025_6,allrussian,incorrect,generic,0.0,,True,True
+242,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,allrussian_2025_7,allrussian,detected,generic,0.0,,False,True
+243,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,allrussian_2025_9,allrussian,correct,generic,0.0,,False,True
+244,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_A_2025_3,bmosl,incorrect,generic,0.0,,True,True
+245,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_A_2025_4,bmosl,detected,generic,0.0,,False,True
+246,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_C_2025_3,bmosl,detected,generic,0.0,,False,True
+247,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_G_2025_2,bmosl,incorrect,generic,0.0,,True,True
+248,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_G_2025_4,bmosl,detected,generic,0.0,,False,True
+249,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_G_2025_5,bmosl,corrected,generic,0.0,,False,True
+250,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_NT_2025_2,bmosl,incorrect,generic,0.0,,True,True
+251,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmosl_NT_2025_6,bmosl,incorrect,generic,0.0,,True,True
+252,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bmo_2025_1,bmo,incorrect,generic,0.0,,True,True
+253,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bulgaria_2025_2,bulgaria,detected,generic,0.0,,False,True
+254,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bulgaria_2025_4,bulgaria,incorrect,generic,0.0,,True,True
+255,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,bulgaria_2025_6,bulgaria,detected,generic,0.0,,False,True
+256,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,canada_2025_1,canada,detected,generic,0.0,,False,True
+257,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,chinatst_2025_10,chinatst,detected,generic,0.0,,False,True
+258,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,chinatst_2025_18,chinatst,detected,generic,0.0,,False,True
+259,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,chinatst_2025_5,chinatst,incorrect,generic,0.0,,True,True
+260,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,chinatst_2025_7,chinatst,incorrect,generic,0.0,,True,True
+261,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,chinatst_2025_9,chinatst,detected,generic,0.0,,False,True
+262,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,china_2025_1,china,detected,generic,0.0,,False,True
+263,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,egmo_2025_4,egmo,detected,generic,0.0,,False,True
+264,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_C_2025_2,elmosl,incorrect,generic,0.0,,True,True
+265,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_C_2025_5,elmosl,incorrect,generic,0.0,,True,True
+266,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_G_2025_2,elmosl,incorrect,generic,0.0,,True,True
+267,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_G_2025_3,elmosl,incorrect,generic,0.0,,True,True
+268,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_G_2025_5,elmosl,detected,generic,0.0,,False,True
+269,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_G_2025_6,elmosl,incorrect,generic,0.0,,True,True
+270,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_G_2025_7,elmosl,detected,generic,0.0,,False,True
+271,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_G_2025_9,elmosl,incorrect,generic,0.0,,True,True
+272,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_NT_2025_2,elmosl,detected,generic,0.0,,False,True
+273,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_NT_2025_3,elmosl,incorrect,generic,0.0,,True,True
+274,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,elmosl_NT_2025_5,elmosl,detected,generic,0.0,,False,True
+275,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,german_2025_4,german,detected,generic,0.0,,False,True
+276,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_14,imosl,detected,generic,0.0,,False,True
+277,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_15,imosl,detected,generic,0.0,,False,True
+278,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_16,imosl,incorrect,generic,0.0,,True,True
+279,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_17,imosl,detected,generic,0.0,,False,True
+280,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_19,imosl,incorrect,generic,0.0,,True,True
+281,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_20,imosl,incorrect,generic,0.0,,True,True
+282,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_26,imosl,detected,generic,0.0,,False,True
+283,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_28,imosl,detected,generic,0.0,,False,True
+284,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_4,imosl,incorrect,generic,0.0,,True,True
+285,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,imosl_2025_9,imosl,detected,generic,0.0,,False,True
+286,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_2025_6,india,detected,generic,0.0,,False,True
+287,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_10,india,detected,generic,0.0,,False,True
+288,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_12,india,incorrect,generic,0.0,,True,True
+289,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_17,india,detected,generic,0.0,,False,True
+290,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_19,india,incorrect,generic,0.0,,True,True
+291,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_20,india,incorrect,generic,0.0,,True,True
+292,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_21,india,incorrect,generic,0.0,,True,True
+293,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_5,india,correct,generic,0.0,,False,True
+294,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,india_prep_2025_9,india,correct,generic,0.0,,False,True
+295,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,iran_tst_2025_1,iran,detected,generic,0.0,,False,True
+296,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,iran_tst_2025_9,iran,detected,generic,0.0,,False,True
+297,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,israel_tst_2025_2,israel,detected,generic,0.0,,False,True
+298,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,izho_2025_2,izho,incorrect,generic,0.0,,True,True
+299,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,izho_2025_4,izho,detected,generic,0.0,,False,True
+300,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_aime_aime_2025_1,matharena,correct,matharena,0.0,,False,True
+301,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_aime_aime_2025_12,matharena,detected,matharena,0.0,,False,True
+302,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_aime_aime_2025_15,matharena,incorrect,matharena,0.0,,True,True
+303,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_aime_aime_2025_16,matharena,correct,matharena,0.0,,False,True
+304,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_aime_aime_2025_6,matharena,correct,matharena,0.0,,False,True
+305,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_aime_aime_2025_9,matharena,correct,matharena,0.0,,False,True
+306,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_brumo_brumo_2025_22,matharena,correct,matharena,0.0,,False,True
+307,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_brumo_brumo_2025_23,matharena,correct,matharena,0.0,,False,True
+308,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_brumo_brumo_2025_28,matharena,detected,matharena,0.0,,False,True
+309,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_brumo_brumo_2025_30,matharena,incorrect,matharena,0.0,,True,True
+310,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_brumo_brumo_2025_6,matharena,detected,matharena,0.0,,False,True
+311,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_brumo_brumo_2025_8,matharena,correct,matharena,0.0,,False,True
+312,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_10,matharena,correct,matharena,0.0,,False,True
+313,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_15,matharena,detected,matharena,0.0,,False,True
+314,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_20,matharena,incorrect,matharena,0.0,,True,True
+315,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_21,matharena,incorrect,matharena,0.0,,True,True
+316,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_27,matharena,detected,matharena,0.0,,False,True
+317,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_28,matharena,incorrect,matharena,0.0,,True,True
+318,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_3,matharena,correct,matharena,0.0,,False,True
+319,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_34,matharena,incorrect,matharena,0.0,,True,True
+320,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_39,matharena,detected,matharena,0.0,,False,True
+321,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_6,matharena,correct,matharena,0.0,,False,True
+322,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_cmimc_cmimc_2025_8,matharena,correct,matharena,0.0,,False,True
+323,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_11,matharena,correct,matharena,0.0,,False,True
+324,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_12,matharena,correct,matharena,0.0,,False,True
+325,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_16,matharena,correct,matharena,0.0,,False,True
+326,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_18,matharena,incorrect,matharena,0.0,,True,True
+327,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_2,matharena,correct,matharena,0.0,,False,True
+328,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_22,matharena,correct,matharena,0.0,,False,True
+329,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_25,matharena,incorrect,matharena,0.0,,True,True
+330,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_28,matharena,correct,matharena,0.0,,False,True
+331,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_8,matharena,correct,matharena,0.0,,False,True
+332,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,nordic_2025_1,nordic,correct,generic,0.0,,False,True
+333,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,nordic_2025_2,nordic,detected,generic,0.0,,False,True
+334,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,pan_african_2025_5,pan,detected,generic,0.0,,False,True
+335,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,philippines_2025_1,philippines,incorrect,generic,0.0,,True,True
+336,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,philippines_2025_4,philippines,incorrect,generic,0.0,,True,True
+337,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,philippines_2025_6,philippines,incorrect,generic,0.0,,True,True
+338,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,polish_2025_2,polish,detected,generic,0.0,,False,True
+339,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,polish_2025_4,polish,detected,generic,0.0,,False,True
+340,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,romania_10_2025_1,romania,detected,generic,0.0,,False,True
+341,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,romania_10_2025_3,romania,detected,generic,0.0,,False,True
+342,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,romania_tst_2025_2,romania,detected,generic,0.0,,False,True
+343,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,spain_2025_2,spain,detected,generic,0.0,,False,True
+344,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,thai_2025_10,thai,detected,generic,0.0,,False,True
+345,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,thai_2025_2,thai,incorrect,generic,0.0,,True,True
+346,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,thai_2025_3,thai,detected,generic,0.0,,False,True
+347,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,thai_2025_5,thai,detected,generic,0.0,,False,True
+348,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,thai_2025_8,thai,incorrect,generic,0.0,,True,True
+349,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,turkey_tst_2025_2,turkey,incorrect,generic,0.0,,True,True
+350,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,turkey_tst_2025_4,turkey,detected,generic,0.0,,False,True
+351,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,usamo_2025_1,usamo,detected,generic,0.0,,False,True
+352,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,usamo_2025_3,usamo,incorrect,generic,0.0,,True,True
+353,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,usamo_2025_5,usamo,detected,generic,0.0,,False,True
+354,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,usamo_2025_6,usamo,detected,generic,0.0,,False,True
+355,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,usatst_2025_3,usatst,detected,generic,0.0,,False,True
+356,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,usatst_2025_6,usatst,detected,generic,0.0,,False,True
+357,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,vietnam_2025_1,vietnam,correct,generic,0.0,,False,True
+358,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,vietnam_2025_3,vietnam,detected,generic,0.0,,False,True
+359,GPT-5.6-luna,"Nemotron-3-Ultra-550B-A55B (OpenRouter, free)",,vietnam_2025_6,vietnam,detected,generic,0.0,,False,True
+360,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,allrussian_2025_12,allrussian,incorrect,generic,0.0,,True,True
+361,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,allrussian_2025_6,allrussian,incorrect,generic,0.0,,True,True
+362,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,allrussian_2025_7,allrussian,detected,generic,0.0,,False,True
+363,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,allrussian_2025_9,allrussian,detected,generic,0.0,,False,True
+364,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_A_2025_3,bmosl,detected,generic,0.0,,False,True
+365,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_A_2025_4,bmosl,detected,generic,0.0,,False,True
+366,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_C_2025_3,bmosl,detected,generic,0.0,,False,True
+367,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_G_2025_2,bmosl,detected,generic,0.0,,False,True
+368,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_G_2025_4,bmosl,incorrect,generic,0.0,,True,True
+369,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_G_2025_5,bmosl,incorrect,generic,0.0,,True,True
+370,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_NT_2025_2,bmosl,incorrect,generic,0.0,,True,True
+371,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmosl_NT_2025_6,bmosl,detected,generic,0.0,,False,True
+372,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bmo_2025_1,bmo,incorrect,generic,0.0,,True,True
+373,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bulgaria_2025_2,bulgaria,detected,generic,0.0,,False,True
+374,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bulgaria_2025_4,bulgaria,detected,generic,0.0,,False,True
+375,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,bulgaria_2025_6,bulgaria,detected,generic,0.0,,False,True
+376,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,canada_2025_1,canada,detected,generic,0.0,,False,True
+377,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,chinatst_2025_10,chinatst,detected,generic,0.0,,False,True
+378,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,chinatst_2025_18,chinatst,incorrect,generic,0.0,,True,True
+379,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,chinatst_2025_5,chinatst,detected,generic,0.0,,False,True
+380,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,chinatst_2025_7,chinatst,incorrect,generic,0.0,,True,True
+381,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,chinatst_2025_9,chinatst,detected,generic,0.0,,False,True
+382,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,china_2025_1,china,detected,generic,0.0,,False,True
+383,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,egmo_2025_4,egmo,incorrect,generic,0.0,,True,True
+384,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_C_2025_2,elmosl,detected,generic,0.0,,False,True
+385,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_C_2025_5,elmosl,incorrect,generic,0.0,,True,True
+386,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_G_2025_2,elmosl,incorrect,generic,0.0,,True,True
+387,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_G_2025_3,elmosl,incorrect,generic,0.0,,True,True
+388,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_G_2025_5,elmosl,incorrect,generic,0.0,,True,True
+389,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_G_2025_6,elmosl,detected,generic,0.0,,False,True
+390,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_G_2025_7,elmosl,incorrect,generic,0.0,,True,True
+391,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_G_2025_9,elmosl,incorrect,generic,0.0,,True,True
+392,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_NT_2025_2,elmosl,incorrect,generic,0.0,,True,True
+393,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_NT_2025_3,elmosl,incorrect,generic,0.0,,True,True
+394,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,elmosl_NT_2025_5,elmosl,detected,generic,0.0,,False,True
+395,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,german_2025_4,german,detected,generic,0.0,,False,True
+396,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_14,imosl,detected,generic,0.0,,False,True
+397,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_15,imosl,detected,generic,0.0,,False,True
+398,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_16,imosl,incorrect,generic,0.0,,True,True
+399,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_17,imosl,incorrect,generic,0.0,,True,True
+400,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_19,imosl,incorrect,generic,0.0,,True,True
+401,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_20,imosl,incorrect,generic,0.0,,True,True
+402,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_26,imosl,detected,generic,0.0,,False,True
+403,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_28,imosl,detected,generic,0.0,,False,True
+404,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_4,imosl,incorrect,generic,0.0,,True,True
+405,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,imosl_2025_9,imosl,detected,generic,0.0,,False,True
+406,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_2025_6,india,incorrect,generic,0.0,,True,True
+407,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_10,india,incorrect,generic,0.0,,True,True
+408,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_12,india,detected,generic,0.0,,False,True
+409,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_17,india,detected,generic,0.0,,False,True
+410,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_19,india,incorrect,generic,0.0,,True,True
+411,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_20,india,detected,generic,0.0,,False,True
+412,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_21,india,detected,generic,0.0,,False,True
+413,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_5,india,detected,generic,0.0,,False,True
+414,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,india_prep_2025_9,india,correct,generic,0.0,,False,True
+415,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,iran_tst_2025_1,iran,incorrect,generic,0.0,,True,True
+416,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,iran_tst_2025_9,iran,detected,generic,0.0,,False,True
+417,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,israel_tst_2025_2,israel,detected,generic,0.0,,False,True
+418,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,izho_2025_2,izho,incorrect,generic,0.0,,True,True
+419,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,izho_2025_4,izho,incorrect,generic,0.0,,True,True
+420,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_aime_aime_2025_1,matharena,detected,matharena,0.0,,False,True
+421,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_aime_aime_2025_12,matharena,incorrect,matharena,0.0,,True,True
+422,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_aime_aime_2025_15,matharena,incorrect,matharena,0.0,,True,True
+423,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_aime_aime_2025_16,matharena,detected,matharena,0.0,,False,True
+424,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_aime_aime_2025_6,matharena,correct,matharena,0.0,,False,True
+425,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_aime_aime_2025_9,matharena,detected,matharena,0.0,,False,True
+426,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_brumo_brumo_2025_22,matharena,incorrect,matharena,0.0,,True,True
+427,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_brumo_brumo_2025_23,matharena,correct,matharena,0.0,,False,True
+428,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_brumo_brumo_2025_28,matharena,detected,matharena,0.0,,False,True
+429,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_brumo_brumo_2025_30,matharena,incorrect,matharena,0.0,,True,True
+430,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_brumo_brumo_2025_6,matharena,detected,matharena,0.0,,False,True
+431,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_brumo_brumo_2025_8,matharena,correct,matharena,0.0,,False,True
+432,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_10,matharena,correct,matharena,0.0,,False,True
+433,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_15,matharena,detected,matharena,0.0,,False,True
+434,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_20,matharena,incorrect,matharena,0.0,,True,True
+435,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_21,matharena,detected,matharena,0.0,,False,True
+436,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_27,matharena,incorrect,matharena,0.0,,True,True
+437,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_28,matharena,incorrect,matharena,0.0,,True,True
+438,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_3,matharena,correct,matharena,0.0,,False,True
+439,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_34,matharena,incorrect,matharena,0.0,,True,True
+440,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_39,matharena,detected,matharena,0.0,,False,True
+441,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_6,matharena,detected,matharena,0.0,,False,True
+442,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_cmimc_cmimc_2025_8,matharena,incorrect,matharena,0.0,,True,True
+443,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_11,matharena,detected,matharena,0.0,,False,True
+444,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_12,matharena,detected,matharena,0.0,,False,True
+445,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_16,matharena,detected,matharena,0.0,,False,True
+446,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_18,matharena,incorrect,matharena,0.0,,True,True
+447,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_2,matharena,detected,matharena,0.0,,False,True
+448,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_22,matharena,detected,matharena,0.0,,False,True
+449,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_25,matharena,incorrect,matharena,0.0,,True,True
+450,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_28,matharena,detected,matharena,0.0,,False,True
+451,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,matharena_hmmt_hmmt_feb_2025_8,matharena,detected,matharena,0.0,,False,True
+452,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,nordic_2025_1,nordic,detected,generic,0.0,,False,True
+453,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,nordic_2025_2,nordic,detected,generic,0.0,,False,True
+454,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,pan_african_2025_5,pan,detected,generic,0.0,,False,True
+455,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,philippines_2025_1,philippines,incorrect,generic,0.0,,True,True
+456,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,philippines_2025_4,philippines,incorrect,generic,0.0,,True,True
+457,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,philippines_2025_6,philippines,incorrect,generic,0.0,,True,True
+458,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,polish_2025_2,polish,detected,generic,0.0,,False,True
+459,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,polish_2025_4,polish,detected,generic,0.0,,False,True
+460,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,romania_10_2025_1,romania,incorrect,generic,0.0,,True,True
+461,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,romania_10_2025_3,romania,detected,generic,0.0,,False,True
+462,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,romania_tst_2025_2,romania,detected,generic,0.0,,False,True
+463,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,spain_2025_2,spain,detected,generic,0.0,,False,True
+464,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,thai_2025_10,thai,detected,generic,0.0,,False,True
+465,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,thai_2025_2,thai,detected,generic,0.0,,False,True
+466,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,thai_2025_3,thai,detected,generic,0.0,,False,True
+467,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,thai_2025_5,thai,detected,generic,0.0,,False,True
+468,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,thai_2025_8,thai,incorrect,generic,0.0,,True,True
+469,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,turkey_tst_2025_2,turkey,incorrect,generic,0.0,,True,True
+470,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,turkey_tst_2025_4,turkey,detected,generic,0.0,,False,True
+471,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,usamo_2025_1,usamo,detected,generic,0.0,,False,True
+472,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,usamo_2025_3,usamo,incorrect,generic,0.0,,True,True
+473,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,usamo_2025_5,usamo,detected,generic,0.0,,False,True
+474,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,usamo_2025_6,usamo,detected,generic,0.0,,False,True
+475,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,usatst_2025_3,usatst,incorrect,generic,0.0,,True,True
+476,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,usatst_2025_6,usatst,detected,generic,0.0,,False,True
+477,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,vietnam_2025_1,vietnam,correct,generic,0.0,,False,True
+478,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,vietnam_2025_3,vietnam,detected,generic,0.0,,False,True
+479,GPT-5.6-luna,"Laguna-S-2.1 (OpenRouter, free)",,vietnam_2025_6,vietnam,detected,generic,0.0,,False,True
