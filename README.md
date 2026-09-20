@@ -16,8 +16,8 @@
 ## Fork note
 
 This is a fork of [`insait-institute/broken-math`](https://github.com/insait-institute/broken-math)
-(INSAIT, Sofia University & SRI Lab, ETH Zurich), used here as a live demo for a YouTube video on
-RLHF/sycophancy. Additions on top of upstream: Groq, OpenCode Zen, and OpenRouter provider support,
+(INSAIT, Sofia University & SRI Lab, ETH Zurich), used here as a demo for measuring sycophancy.
+Additions on top of upstream: Groq, OpenCode Zen, and OpenRouter provider support,
 remote Ollama/vLLM model configs, a generate-vs-verify ("prove or disprove") solver config, and
 truthful judge-parse-failure scoring. All benchmark design, data, and the original paper credit
 belongs to the upstream authors.
