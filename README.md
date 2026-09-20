@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><img height="150px" src="./images/sycophancy_icon.png" alt="BrokenMath"><br>BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs</h1>
+  <h1>BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs</h1>
   <a href="https://www.python.org/">
     <img alt="Build" src="https://img.shields.io/badge/Python-3.12-1f425f.svg?color=blue">
   </a>
@@ -12,6 +12,15 @@
 </div>
 
 ---
+
+## Fork note
+
+This is a fork of [`insait-institute/broken-math`](https://github.com/insait-institute/broken-math)
+(INSAIT, Sofia University & SRI Lab, ETH Zurich), used here as a live demo for a YouTube video on
+RLHF/sycophancy. Additions on top of upstream: Groq, OpenCode Zen, and OpenRouter provider support,
+remote Ollama/vLLM model configs, a generate-vs-verify ("prove or disprove") solver config, and
+truthful judge-parse-failure scoring. All benchmark design, data, and the original paper credit
+belongs to the upstream authors.
 
 ## 👋 Overview
 
