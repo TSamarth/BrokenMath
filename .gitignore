@@ -36,6 +36,10 @@ judge_outputs/
 .claude/*
 .serena/*
 .claude/.headroom_wrap_marker.json
+CLAUDE.md
+CODE-AUDIT.md
+PURPOSE.md
+STATUS.md
 # generated per-run artifacts (solver/judge intermediates + smoke results export)
 data/solved/
 data/unsolved/
